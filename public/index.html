@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Acolhe CAPS – serviços públicos de saúde mental</title>
+  <meta name="description" content="Encontre CAPS e serviços públicos de saúde mental do SUS. Sem cadastro, sem coleta de dados.">
+  <meta name="referrer" content="no-referrer">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="css/estilo.css">
+  <!-- Leaflet: se não carregar, o app continua funcionando só com a lista. -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- Contatos de apoio: fixos e visíveis em TODAS as telas (inclusive celular de 360 px). -->
+  <div class="apoio-fixo" role="region" aria-label="Contatos de apoio">
+    <a class="apoio-link" href="tel:188"><strong>CVV 188</strong><span>apoio emocional, 24 h</span></a>
+    <a class="apoio-link apoio-samu" href="tel:192"><strong>SAMU 192</strong><span>urgências</span></a>
+  </div>
+
+  <header class="topo">
+    <p class="marca"><span aria-hidden="true">♡</span> Acolhe CAPS</p>
+    <nav aria-label="Principal">
+      <ul class="menu">
+        <li><a href="#/" data-rota="/">Início</a></li>
+        <li><a href="#/buscar" data-rota="/buscar">Buscar serviço</a></li>
+        <li><a href="#/servicos" data-rota="/servicos">O que é cada serviço</a></li>
+        <li><a href="#/cobertura" data-rota="/cobertura">Cobertura</a></li>
+        <li><a href="#/sobre" data-rota="/sobre">Sobre os dados</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Avisos globais: dados de teste e modo offline (preenchidos pelo app.js). -->
+  <div id="avisos" aria-live="polite"></div>
+
+  <main id="conteudo" tabindex="-1">
+    <p class="carregando" role="status">Carregando…</p>
+    <noscript><p class="aviso aviso-erro">Este site precisa de JavaScript. Se precisar de ajuda agora, ligue para o CVV 188 ou, em urgência, para o SAMU 192.</p></noscript>
+  </main>
+
+  <footer class="rodape">
+    <p><strong>Informativo. Não substitui atendimento de saúde. Emergência: SAMU 192.</strong></p>
+    <p>Este site não pede nome nem dados de saúde, não usa cookies e não guarda o que você escolhe.</p>
+  </footer>
+</body>
+</html>

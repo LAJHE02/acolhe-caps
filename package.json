@@ -1,0 +1,19 @@
+{
+  "name": "acolhe-caps",
+  "version": "1.0.0",
+  "description": "Acolhe CAPS: localizador de serviços públicos de saúde mental (RAPS/SUS). Sem dependências externas.",
+  "private": true,
+  "engines": { "node": ">=22.5" },
+  "scripts": {
+    "atualizar:online": "python3 scripts/carga_real.py atualizar-auto",
+    "carregar:amostra": "python3 scripts/carga_real.py carregar-amostra",
+    "carregar:online": "python3 scripts/carga_real.py carregar",
+    "descobrir": "python3 scripts/carga_real.py descobrir",
+    "seed": "python3 scripts/seed_teste.py",
+    "seed:limpar": "python3 scripts/seed_teste.py --limpar",
+    "start": "node server/server.js",
+    "start:online": "node server/server.js --atualizar-online",
+    "test": "node --test server/server.test.js"
+  },
+  "license": "MIT"
+}

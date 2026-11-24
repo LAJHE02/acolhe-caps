@@ -1,0 +1,49 @@
+{
+  "_leia_me": "Copie para data/config_cnes.json. Os códigos de Tipo (70) e Subtipo (70.01 a 70.07) já estão confirmados na Tabela de Tipos e Subtipos de Estabelecimento SCNES (Portaria SAS/MS 198/2008 e Portaria GM/MS 3.088/2011). Antes de rodar 'carga_real.py carregar' contra a API DEMAS, rode 'carga_real.py descobrir' para confirmar os nomes exatos das chaves JSON retornadas pelo endpoint e troque 'confirmado' para true. Para carregar imediatamente a amostra real coletada do CnesWeb/Secretarias/IBGE (Plano B), rode: python3 scripts/carga_real.py carregar-amostra",
+  "confirmado": false,
+  "estabelecimentos": {
+    "url": "https://apidadosabertos.saude.gov.br/cnes/estabelecimentos",
+    "params": { "codigo_tipo_unidade": 70, "status": 1 },
+    "_params_obs": "Confirmado na documentação DEMAS/Catálogo ODA e CnesWeb: codigo_tipo_unidade=70 (CENTRO DE ATENCAO PSICOSSOCIAL), status=1 (ativos). O parâmetro limit na API DEMAS deve ser <= 20.",
+    "paginacao": { "limite": 20, "limite_param": "limit", "offset_param": "offset" },
+    "chave_lista": "estabelecimentos",
+    "campo_modalidade": "codigo_subtipo_unidade",
+    "campos": {
+      "cnes": "codigo_cnes",
+      "nome": "nome_fantasia",
+      "endereco": "endereco_estabelecimento",
+      "bairro": "bairro_estabelecimento",
+      "codigo_municipio": "codigo_municipio",
+      "latitude": "latitude_estabelecimento_decimo_grau",
+      "longitude": "longitude_estabelecimento_decimo_grau",
+      "telefone": "numero_telefone_estabelecimento"
+    }
+  },
+  "modalidades": {
+    "CAPS_AD_III": {
+      "valores": ["70.06", "70.07", "006", "007", "06", "07", "6", "7"],
+      "regex_nome": "\\b(CAPS|CERSAM)\\s*AD\\s*(III|IV|3|4|24)\\b|\\bALCOOL.*DROGAS?\\s*(III|24)\\b"
+    },
+    "CAPS_AD": {
+      "valores": ["70.05", "005", "05", "5"],
+      "regex_nome": "\\b(CAPS|CERSAM)\\s*AD\\b|\\bCAPSAD\\b|\\bALCOOL\\s+E\\s+(OUTRAS\\s+)?DROGAS?\\b"
+    },
+    "CAPSI": {
+      "valores": ["70.04", "004", "04", "4"],
+      "regex_nome": "\\bCAPSI\\b|\\bCERSAMI\\b|\\bCAPS\\s*IJ\\b|\\bINFANT(IL|O)|\\bINFANCIA\\b|\\bCRIANCA\\b"
+    },
+    "CAPS_III": {
+      "valores": ["70.03", "003", "03", "3"],
+      "regex_nome": "\\bCAPS\\s*(III|3)\\b|\\bCERSAM\\b"
+    },
+    "CAPS_II": {
+      "valores": ["70.02", "002", "02", "2"],
+      "regex_nome": "\\bCAPS\\s*(II|2)\\b|\\bPSICOSSOCIAL\\s+II\\b"
+    },
+    "CAPS_I": {
+      "valores": ["70.01", "001", "01", "1"],
+      "regex_nome": "\\bCAPS\\s*(I|1)\\b|\\bCAPS1\\b|\\bPSICOSSOCIAL\\s+I\\b"
+    }
+  },
+  "_modalidades_obs": "Subtipos oficiais do Tipo 70 no SCNES: 70.01 (CAPS I), 70.02 (CAPS II), 70.03 (CAPS III), 70.04 (CAPS Infanto/Juvenil), 70.05 (CAPS Álcool e Droga), 70.06 (CAPS AD III - Municipal), 70.07 (CAPS AD III - Regional)."
+}

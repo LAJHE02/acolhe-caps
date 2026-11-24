@@ -1,0 +1,4634 @@
+{
+  "coletado_em": "2026-11-24T16:25:00Z",
+  "fonte": "CNES/DATASUS (Tipo 70 - CAPS), Secretarias de Saúde (SMS-Rio, FeSaúde Niterói, SES-DF, PBH-MG, SMS-POA, SESA-ES) e IBGE Censo Demográfico 2022",
+  "url": "http://cnes2.datasus.gov.br/Mod_Ind_Unidade_Listar.asp?VTipo=70",
+  "observacao": "Amostra real extraída em 24/11/2026 do CnesWeb/DATASUS (Tipo de Estabelecimento 70 = CENTRO DE ATENÇÃO PSICOSSOCIAL), cruzada com os endereços e telefones oficiais publicados pelas Secretarias de Saúde de Brasília (saude.df.gov.br), Belo Horizonte (prefeitura.pbh.gov.br) e Porto Alegre (prefeitura.poa.br), e com a população residente do Censo Demográfico 2022 do IBGE. Nos municípios em que apenas a listagem resumida do CnesWeb foi consultada, endereço e telefone permanecem nulos (não informados) para nunca inventar dados.",
+  "municipios": [
+    {
+      "codigo_ibge": "5300108",
+      "nome": "Brasília",
+      "uf": "DF",
+      "codigo_uf": 53,
+      "populacao": 2817381,
+      "populacao_ano": 2022,
+      "latitude": -15.79389,
+      "longitude": -47.88278
+    },
+    {
+      "codigo_ibge": "3106200",
+      "nome": "Belo Horizonte",
+      "uf": "MG",
+      "codigo_uf": 31,
+      "populacao": 2315560,
+      "populacao_ano": 2022,
+      "latitude": -19.91668,
+      "longitude": -43.93449
+    },
+    {
+      "codigo_ibge": "3144805",
+      "nome": "Nova Lima",
+      "uf": "MG",
+      "codigo_uf": 31,
+      "populacao": 111697,
+      "populacao_ano": 2022,
+      "latitude": -19.9856,
+      "longitude": -43.8469
+    },
+    {
+      "codigo_ibge": "3156700",
+      "nome": "Sabará",
+      "uf": "MG",
+      "codigo_uf": 31,
+      "populacao": 129380,
+      "populacao_ano": 2022,
+      "latitude": -19.8844,
+      "longitude": -43.8267
+    },
+    {
+      "codigo_ibge": "3110004",
+      "nome": "Caeté",
+      "uf": "MG",
+      "codigo_uf": 31,
+      "populacao": 38776,
+      "populacao_ano": 2022,
+      "latitude": -19.8808,
+      "longitude": -43.6703
+    },
+    {
+      "codigo_ibge": "4314902",
+      "nome": "Porto Alegre",
+      "uf": "RS",
+      "codigo_uf": 43,
+      "populacao": 1332845,
+      "populacao_ano": 2022,
+      "latitude": -30.03465,
+      "longitude": -51.21766
+    },
+    {
+      "codigo_ibge": "4305108",
+      "nome": "Caxias do Sul",
+      "uf": "RS",
+      "codigo_uf": 43,
+      "populacao": 463501,
+      "populacao_ano": 2022,
+      "latitude": -29.1678,
+      "longitude": -51.1794
+    },
+    {
+      "codigo_ibge": "4304606",
+      "nome": "Canoas",
+      "uf": "RS",
+      "codigo_uf": 43,
+      "populacao": 347657,
+      "populacao_ano": 2022,
+      "latitude": -29.9178,
+      "longitude": -51.1836
+    },
+    {
+      "codigo_ibge": "4314407",
+      "nome": "Pelotas",
+      "uf": "RS",
+      "codigo_uf": 43,
+      "populacao": 325685,
+      "populacao_ano": 2022,
+      "latitude": -31.7654,
+      "longitude": -52.3376
+    },
+    {
+      "codigo_ibge": "4316907",
+      "nome": "Santa Maria",
+      "uf": "RS",
+      "codigo_uf": 43,
+      "populacao": 271735,
+      "populacao_ano": 2022,
+      "latitude": -29.6842,
+      "longitude": -53.8069
+    },
+    {
+      "codigo_ibge": "4309209",
+      "nome": "Gravataí",
+      "uf": "RS",
+      "codigo_uf": 43,
+      "populacao": 265074,
+      "populacao_ano": 2022,
+      "latitude": -29.9444,
+      "longitude": -50.9919
+    },
+    {
+      "codigo_ibge": "4313409",
+      "nome": "Novo Hamburgo",
+      "uf": "RS",
+      "codigo_uf": 43,
+      "populacao": 227646,
+      "populacao_ano": 2022,
+      "latitude": -29.6783,
+      "longitude": -51.1306
+    },
+    {
+      "codigo_ibge": "4323002",
+      "nome": "Viamão",
+      "uf": "RS",
+      "codigo_uf": 43,
+      "populacao": 224112,
+      "populacao_ano": 2022,
+      "latitude": -30.0811,
+      "longitude": -51.0233
+    },
+    {
+      "codigo_ibge": "4318705",
+      "nome": "São Leopoldo",
+      "uf": "RS",
+      "codigo_uf": 43,
+      "populacao": 217409,
+      "populacao_ano": 2022,
+      "latitude": -29.7603,
+      "longitude": -51.1472
+    },
+    {
+      "codigo_ibge": "4314100",
+      "nome": "Passo Fundo",
+      "uf": "RS",
+      "codigo_uf": 43,
+      "populacao": 206215,
+      "populacao_ano": 2022,
+      "latitude": -28.2628,
+      "longitude": -52.4067
+    },
+    {
+      "codigo_ibge": "4315602",
+      "nome": "Rio Grande",
+      "uf": "RS",
+      "codigo_uf": 43,
+      "populacao": 191900,
+      "populacao_ano": 2022,
+      "latitude": -32.035,
+      "longitude": -52.0986
+    },
+    {
+      "codigo_ibge": "4300604",
+      "nome": "Alvorada",
+      "uf": "RS",
+      "codigo_uf": 43,
+      "populacao": 187315,
+      "populacao_ano": 2022,
+      "latitude": -29.9914,
+      "longitude": -51.0808
+    },
+    {
+      "codigo_ibge": "4303103",
+      "nome": "Cachoeirinha",
+      "uf": "RS",
+      "codigo_uf": 43,
+      "populacao": 136258,
+      "populacao_ano": 2022,
+      "latitude": -29.9511,
+      "longitude": -51.0939
+    },
+    {
+      "codigo_ibge": "4316808",
+      "nome": "Santa Cruz do Sul",
+      "uf": "RS",
+      "codigo_uf": 43,
+      "populacao": 133230,
+      "populacao_ano": 2022,
+      "latitude": -29.7175,
+      "longitude": -52.4258
+    },
+    {
+      "codigo_ibge": "4320008",
+      "nome": "Sapucaia do Sul",
+      "uf": "RS",
+      "codigo_uf": 43,
+      "populacao": 132107,
+      "populacao_ano": 2022,
+      "latitude": -29.8278,
+      "longitude": -51.1447
+    },
+    {
+      "codigo_ibge": "4302105",
+      "nome": "Bento Gonçalves",
+      "uf": "RS",
+      "codigo_uf": 43,
+      "populacao": 123151,
+      "populacao_ano": 2022,
+      "latitude": -29.1714,
+      "longitude": -51.5192
+    },
+    {
+      "codigo_ibge": "4301602",
+      "nome": "Bagé",
+      "uf": "RS",
+      "codigo_uf": 43,
+      "populacao": 117938,
+      "populacao_ano": 2022,
+      "latitude": -31.3314,
+      "longitude": -54.1069
+    },
+    {
+      "codigo_ibge": "4322400",
+      "nome": "Uruguaiana",
+      "uf": "RS",
+      "codigo_uf": 43,
+      "populacao": 117210,
+      "populacao_ano": 2022,
+      "latitude": -29.7547,
+      "longitude": -57.0883
+    },
+    {
+      "codigo_ibge": "4309050",
+      "nome": "Glorinha",
+      "uf": "RS",
+      "codigo_uf": 43,
+      "populacao": 7658,
+      "populacao_ano": 2022,
+      "latitude": -29.8806,
+      "longitude": -50.7819
+    },
+    {
+      "codigo_ibge": "3205002",
+      "nome": "Serra",
+      "uf": "ES",
+      "codigo_uf": 32,
+      "populacao": 520653,
+      "populacao_ano": 2022,
+      "latitude": -20.1286,
+      "longitude": -40.3078
+    },
+    {
+      "codigo_ibge": "3205200",
+      "nome": "Vila Velha",
+      "uf": "ES",
+      "codigo_uf": 32,
+      "populacao": 467722,
+      "populacao_ano": 2022,
+      "latitude": -20.3297,
+      "longitude": -40.2925
+    },
+    {
+      "codigo_ibge": "3201308",
+      "nome": "Cariacica",
+      "uf": "ES",
+      "codigo_uf": 32,
+      "populacao": 353491,
+      "populacao_ano": 2022,
+      "latitude": -20.2639,
+      "longitude": -40.42
+    },
+    {
+      "codigo_ibge": "3205309",
+      "nome": "Vitória",
+      "uf": "ES",
+      "codigo_uf": 32,
+      "populacao": 322869,
+      "populacao_ano": 2022,
+      "latitude": -20.3155,
+      "longitude": -40.3128
+    },
+    {
+      "codigo_ibge": "3201209",
+      "nome": "Cachoeiro de Itapemirim",
+      "uf": "ES",
+      "codigo_uf": 32,
+      "populacao": 185786,
+      "populacao_ano": 2022,
+      "latitude": -20.8489,
+      "longitude": -41.1128
+    },
+    {
+      "codigo_ibge": "3203205",
+      "nome": "Linhares",
+      "uf": "ES",
+      "codigo_uf": 32,
+      "populacao": 166786,
+      "populacao_ano": 2022,
+      "latitude": -19.3911,
+      "longitude": -40.0722
+    },
+    {
+      "codigo_ibge": "3202405",
+      "nome": "Guarapari",
+      "uf": "ES",
+      "codigo_uf": 32,
+      "populacao": 124656,
+      "populacao_ano": 2022,
+      "latitude": -20.6739,
+      "longitude": -40.4975
+    },
+    {
+      "codigo_ibge": "3204906",
+      "nome": "São Mateus",
+      "uf": "ES",
+      "codigo_uf": 32,
+      "populacao": 123752,
+      "populacao_ano": 2022,
+      "latitude": -18.7161,
+      "longitude": -39.8589
+    },
+    {
+      "codigo_ibge": "3201506",
+      "nome": "Colatina",
+      "uf": "ES",
+      "codigo_uf": 32,
+      "populacao": 120033,
+      "populacao_ano": 2022,
+      "latitude": -19.5394,
+      "longitude": -40.6306
+    },
+    {
+      "codigo_ibge": "3205101",
+      "nome": "Viana",
+      "uf": "ES",
+      "codigo_uf": 32,
+      "populacao": 73423,
+      "populacao_ano": 2022,
+      "latitude": -20.3903,
+      "longitude": -40.4961
+    },
+    {
+      "codigo_ibge": "5002704",
+      "nome": "Campo Grande",
+      "uf": "MS",
+      "codigo_uf": 50,
+      "populacao": 898100,
+      "populacao_ano": 2022,
+      "latitude": -20.4697,
+      "longitude": -54.6201
+    },
+    {
+      "codigo_ibge": "5003702",
+      "nome": "Dourados",
+      "uf": "MS",
+      "codigo_uf": 50,
+      "populacao": 243367,
+      "populacao_ano": 2022,
+      "latitude": -22.2211,
+      "longitude": -54.8056
+    },
+    {
+      "codigo_ibge": "5008305",
+      "nome": "Três Lagoas",
+      "uf": "MS",
+      "codigo_uf": 50,
+      "populacao": 132152,
+      "populacao_ano": 2022,
+      "latitude": -20.7511,
+      "longitude": -51.6783
+    },
+    {
+      "codigo_ibge": "5003207",
+      "nome": "Corumbá",
+      "uf": "MS",
+      "codigo_uf": 50,
+      "populacao": 96268,
+      "populacao_ano": 2022,
+      "latitude": -19.0092,
+      "longitude": -57.6533
+    },
+    {
+      "codigo_ibge": "5006606",
+      "nome": "Ponta Porã",
+      "uf": "MS",
+      "codigo_uf": 50,
+      "populacao": 92017,
+      "populacao_ano": 2022,
+      "latitude": -22.5361,
+      "longitude": -55.7256
+    },
+    {
+      "codigo_ibge": "5005251",
+      "nome": "Ladário",
+      "uf": "MS",
+      "codigo_uf": 50,
+      "populacao": 21522,
+      "populacao_ano": 2022,
+      "latitude": -19.0047,
+      "longitude": -57.6017
+    },
+    {
+      "codigo_ibge": "5103403",
+      "nome": "Cuiabá",
+      "uf": "MT",
+      "codigo_uf": 51,
+      "populacao": 650877,
+      "populacao_ano": 2022,
+      "latitude": -15.6014,
+      "longitude": -56.0979
+    },
+    {
+      "codigo_ibge": "5108402",
+      "nome": "Várzea Grande",
+      "uf": "MT",
+      "codigo_uf": 51,
+      "populacao": 300078,
+      "populacao_ano": 2022,
+      "latitude": -15.6467,
+      "longitude": -56.1325
+    },
+    {
+      "codigo_ibge": "5107602",
+      "nome": "Rondonópolis",
+      "uf": "MT",
+      "codigo_uf": 51,
+      "populacao": 244911,
+      "populacao_ano": 2022,
+      "latitude": -16.4708,
+      "longitude": -54.6356
+    },
+    {
+      "codigo_ibge": "5107909",
+      "nome": "Sinop",
+      "uf": "MT",
+      "codigo_uf": 51,
+      "populacao": 196312,
+      "populacao_ano": 2022,
+      "latitude": -11.8642,
+      "longitude": -55.5025
+    },
+    {
+      "codigo_ibge": "5107925",
+      "nome": "Sorriso",
+      "uf": "MT",
+      "codigo_uf": 51,
+      "populacao": 110635,
+      "populacao_ano": 2022,
+      "latitude": -12.5453,
+      "longitude": -55.7114
+    },
+    {
+      "codigo_ibge": "5103007",
+      "nome": "Chapada dos Guimarães",
+      "uf": "MT",
+      "codigo_uf": 51,
+      "populacao": 18990,
+      "populacao_ano": 2022,
+      "latitude": -15.4606,
+      "longitude": -55.7497
+    },
+    {
+      "codigo_ibge": "2211001",
+      "nome": "Teresina",
+      "uf": "PI",
+      "codigo_uf": 22,
+      "populacao": 866300,
+      "populacao_ano": 2022,
+      "latitude": -5.0892,
+      "longitude": -42.8019
+    },
+    {
+      "codigo_ibge": "2207702",
+      "nome": "Parnaíba",
+      "uf": "PI",
+      "codigo_uf": 22,
+      "populacao": 162159,
+      "populacao_ano": 2022,
+      "latitude": -2.9047,
+      "longitude": -41.7767
+    },
+    {
+      "codigo_ibge": "2208007",
+      "nome": "Picos",
+      "uf": "PI",
+      "codigo_uf": 22,
+      "populacao": 83090,
+      "populacao_ano": 2022,
+      "latitude": -7.0769,
+      "longitude": -41.4669
+    },
+    {
+      "codigo_ibge": "2208403",
+      "nome": "Piripiri",
+      "uf": "PI",
+      "codigo_uf": 22,
+      "populacao": 65538,
+      "populacao_ano": 2022,
+      "latitude": -4.2733,
+      "longitude": -41.7769
+    },
+    {
+      "codigo_ibge": "2203909",
+      "nome": "Floriano",
+      "uf": "PI",
+      "codigo_uf": 22,
+      "populacao": 62036,
+      "populacao_ano": 2022,
+      "latitude": -6.7669,
+      "longitude": -43.0225
+    },
+    {
+      "codigo_ibge": "4113700",
+      "nome": "Londrina",
+      "uf": "PR",
+      "codigo_uf": 41,
+      "populacao": 555965,
+      "populacao_ano": 2022,
+      "latitude": -23.3045,
+      "longitude": -51.1696
+    },
+    {
+      "codigo_ibge": "4103701",
+      "nome": "Cambé",
+      "uf": "PR",
+      "codigo_uf": 41,
+      "populacao": 107208,
+      "populacao_ano": 2022,
+      "latitude": -23.2758,
+      "longitude": -51.2778
+    },
+    {
+      "codigo_ibge": "3304557",
+      "nome": "Rio de Janeiro",
+      "uf": "RJ",
+      "codigo_uf": 33,
+      "populacao": 6211223,
+      "populacao_ano": 2022,
+      "latitude": -22.9068,
+      "longitude": -43.1729
+    },
+    {
+      "codigo_ibge": "3304904",
+      "nome": "São Gonçalo",
+      "uf": "RJ",
+      "codigo_uf": 33,
+      "populacao": 896744,
+      "populacao_ano": 2022,
+      "latitude": -22.8268,
+      "longitude": -43.0634
+    },
+    {
+      "codigo_ibge": "3301702",
+      "nome": "Duque de Caxias",
+      "uf": "RJ",
+      "codigo_uf": 33,
+      "populacao": 808161,
+      "populacao_ano": 2022,
+      "latitude": -22.7858,
+      "longitude": -43.3049
+    },
+    {
+      "codigo_ibge": "3303500",
+      "nome": "Nova Iguaçu",
+      "uf": "RJ",
+      "codigo_uf": 33,
+      "populacao": 785867,
+      "populacao_ano": 2022,
+      "latitude": -22.7592,
+      "longitude": -43.4511
+    },
+    {
+      "codigo_ibge": "3301009",
+      "nome": "Campos dos Goytacazes",
+      "uf": "RJ",
+      "codigo_uf": 33,
+      "populacao": 483540,
+      "populacao_ano": 2022,
+      "latitude": -21.7545,
+      "longitude": -41.3244
+    },
+    {
+      "codigo_ibge": "3300456",
+      "nome": "Belford Roxo",
+      "uf": "RJ",
+      "codigo_uf": 33,
+      "populacao": 483087,
+      "populacao_ano": 2022,
+      "latitude": -22.7642,
+      "longitude": -43.3992
+    },
+    {
+      "codigo_ibge": "3303302",
+      "nome": "Niterói",
+      "uf": "RJ",
+      "codigo_uf": 33,
+      "populacao": 481749,
+      "populacao_ano": 2022,
+      "latitude": -22.8832,
+      "longitude": -43.1034
+    },
+    {
+      "codigo_ibge": "3305109",
+      "nome": "São João de Meriti",
+      "uf": "RJ",
+      "codigo_uf": 33,
+      "populacao": 440962,
+      "populacao_ano": 2022,
+      "latitude": -22.8039,
+      "longitude": -43.3722
+    },
+    {
+      "codigo_ibge": "3303906",
+      "nome": "Petrópolis",
+      "uf": "RJ",
+      "codigo_uf": 33,
+      "populacao": 278881,
+      "populacao_ano": 2022,
+      "latitude": -22.505,
+      "longitude": -43.1789
+    },
+    {
+      "codigo_ibge": "3306305",
+      "nome": "Volta Redonda",
+      "uf": "RJ",
+      "codigo_uf": 33,
+      "populacao": 261563,
+      "populacao_ano": 2022,
+      "latitude": -22.5202,
+      "longitude": -44.0996
+    },
+    {
+      "codigo_ibge": "3302403",
+      "nome": "Macaé",
+      "uf": "RJ",
+      "codigo_uf": 33,
+      "populacao": 246391,
+      "populacao_ano": 2022,
+      "latitude": -22.3708,
+      "longitude": -41.7869
+    },
+    {
+      "codigo_ibge": "3302502",
+      "nome": "Magé",
+      "uf": "RJ",
+      "codigo_uf": 33,
+      "populacao": 228127,
+      "populacao_ano": 2022,
+      "latitude": -22.6528,
+      "longitude": -43.0406
+    },
+    {
+      "codigo_ibge": "3301900",
+      "nome": "Itaboraí",
+      "uf": "RJ",
+      "codigo_uf": 33,
+      "populacao": 224267,
+      "populacao_ano": 2022,
+      "latitude": -22.7444,
+      "longitude": -42.8594
+    },
+    {
+      "codigo_ibge": "3300704",
+      "nome": "Cabo Frio",
+      "uf": "RJ",
+      "codigo_uf": 33,
+      "populacao": 222161,
+      "populacao_ano": 2022,
+      "latitude": -22.8789,
+      "longitude": -42.0186
+    },
+    {
+      "codigo_ibge": "3302700",
+      "nome": "Maricá",
+      "uf": "RJ",
+      "codigo_uf": 33,
+      "populacao": 197277,
+      "populacao_ano": 2022,
+      "latitude": -22.9194,
+      "longitude": -42.8186
+    },
+    {
+      "codigo_ibge": "3303401",
+      "nome": "Nova Friburgo",
+      "uf": "RJ",
+      "codigo_uf": 33,
+      "populacao": 189939,
+      "populacao_ano": 2022,
+      "latitude": -22.2819,
+      "longitude": -42.5311
+    },
+    {
+      "codigo_ibge": "3300407",
+      "nome": "Barra Mansa",
+      "uf": "RJ",
+      "codigo_uf": 33,
+      "populacao": 169894,
+      "populacao_ano": 2022,
+      "latitude": -22.5442,
+      "longitude": -44.1714
+    },
+    {
+      "codigo_ibge": "3300100",
+      "nome": "Angra dos Reis",
+      "uf": "RJ",
+      "codigo_uf": 33,
+      "populacao": 167434,
+      "populacao_ano": 2022,
+      "latitude": -23.0067,
+      "longitude": -44.3181
+    },
+    {
+      "codigo_ibge": "3302858",
+      "nome": "Mesquita",
+      "uf": "RJ",
+      "codigo_uf": 33,
+      "populacao": 167127,
+      "populacao_ano": 2022,
+      "latitude": -22.7825,
+      "longitude": -43.4317
+    },
+    {
+      "codigo_ibge": "3305802",
+      "nome": "Teresópolis",
+      "uf": "RJ",
+      "codigo_uf": 33,
+      "populacao": 165123,
+      "populacao_ano": 2022,
+      "latitude": -22.4122,
+      "longitude": -42.9664
+    },
+    {
+      "codigo_ibge": "3303203",
+      "nome": "Nilópolis",
+      "uf": "RJ",
+      "codigo_uf": 33,
+      "populacao": 146774,
+      "populacao_ano": 2022,
+      "latitude": -22.8083,
+      "longitude": -43.4147
+    },
+    {
+      "codigo_ibge": "3304201",
+      "nome": "Resende",
+      "uf": "RJ",
+      "codigo_uf": 33,
+      "populacao": 129612,
+      "populacao_ano": 2022,
+      "latitude": -22.4689,
+      "longitude": -44.4467
+    },
+    {
+      "codigo_ibge": "3300159",
+      "nome": "Aperibé",
+      "uf": "RJ",
+      "codigo_uf": 33,
+      "populacao": 11034,
+      "populacao_ano": 2022,
+      "latitude": -21.6214,
+      "longitude": -42.1036
+    }
+  ],
+  "caps": [
+    {
+      "cnes": "7219695",
+      "nome": "CAPS AD III CANDANGO",
+      "modalidade": "CAPS_AD_III",
+      "codigo_ibge": "5300108",
+      "endereco": "SCS, Quadra 5, Bloco C, Loja 73",
+      "bairro": "Asa Sul",
+      "telefone": "(61) 2017-1900",
+      "latitude": -15.7975,
+      "longitude": -47.8886
+    },
+    {
+      "cnes": "7282494",
+      "nome": "CAPS AD III SAMAMBAIA",
+      "modalidade": "CAPS_AD_III",
+      "codigo_ibge": "5300108",
+      "endereco": "QS 107, Conjunto 8, Lotes 3, 4 e 5",
+      "bairro": "Samambaia",
+      "telefone": "(61) 2017-1700",
+      "latitude": -15.8758,
+      "longitude": -48.0792
+    },
+    {
+      "cnes": "6585760",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL AD III CEILANDIA",
+      "modalidade": "CAPS_AD_III",
+      "codigo_ibge": "5300108",
+      "endereco": "QNN 01, Conjunto A, Lote 45/47, Av. Leste",
+      "bairro": "Ceilândia Norte",
+      "telefone": "(61) 2017-2000",
+      "latitude": -15.8147,
+      "longitude": -48.1061
+    },
+    {
+      "cnes": "7094116",
+      "nome": "CAPS AD ITAPOA",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "5300108",
+      "endereco": "Anexo II, Complexo Administrativo do Itapoã, Q. 378, Conj. A, AE 4",
+      "bairro": "Itapoã",
+      "telefone": "(61) 2017-1215",
+      "latitude": -15.7486,
+      "longitude": -47.7689
+    },
+    {
+      "cnes": "7055919",
+      "nome": "CAPS AD SANTA MARIA",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "5300108",
+      "endereco": "Quadra 312, Conjunto H, Casa 12",
+      "bairro": "Santa Maria Norte",
+      "telefone": "(61) 2017-1145",
+      "latitude": -16.0028,
+      "longitude": -48.0125
+    },
+    {
+      "cnes": "5554349",
+      "nome": "CAPS AD SOBRADINHO",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "5300108",
+      "endereco": "AR 17, Chácara 14 (antigo Centro de Saúde nº 3)",
+      "bairro": "Sobradinho II",
+      "telefone": "(61) 99961-0924",
+      "latitude": -15.6431,
+      "longitude": -47.8264
+    },
+    {
+      "cnes": "3372375",
+      "nome": "CAPS AD II GUARA",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "5300108",
+      "endereco": "QE 23, Área Especial s/n, Subsolo do Centro de Saúde 02",
+      "bairro": "Guará II",
+      "telefone": "(61) 2017-1145",
+      "latitude": -15.8267,
+      "longitude": -47.9794
+    },
+    {
+      "cnes": "7379110",
+      "nome": "CAPS BRASILIA UNIDADE II",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "5300108",
+      "endereco": "SCRLN 905 SAP 1 (antiga UBS 11)",
+      "bairro": "Asa Norte",
+      "telefone": "(61) 2017-1900",
+      "latitude": -15.7689,
+      "longitude": -47.8933
+    },
+    {
+      "cnes": "5167892",
+      "nome": "CAPS II PARANOA",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "5300108",
+      "endereco": "Quadra 02, Conjunto K, AE 1, Setor Hospitalar do Paranoá",
+      "bairro": "Paranoá",
+      "telefone": "(61) 2017-1231",
+      "latitude": -15.7747,
+      "longitude": -47.7803
+    },
+    {
+      "cnes": "6666701",
+      "nome": "CAPS II PLANALTINA",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "5300108",
+      "endereco": "Via W/L nº 4, Setor Hospitalar Oeste, AE",
+      "bairro": "Planaltina",
+      "telefone": "(61) 2017-1350",
+      "latitude": -15.6197,
+      "longitude": -47.6531
+    },
+    {
+      "cnes": "5447410",
+      "nome": "CAPS II TAGUATINGA",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "5300108",
+      "endereco": "QNA 39, Área Especial 19",
+      "bairro": "Taguatinga Norte",
+      "telefone": "(61) 2017-1700",
+      "latitude": -15.8169,
+      "longitude": -48.0619
+    },
+    {
+      "cnes": "2649535",
+      "nome": "CAPS II RIACHO FUNDO",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "5300108",
+      "endereco": "EPNB, Km 2, Granja do Riacho Fundo, AE s/n",
+      "bairro": "Riacho Fundo I",
+      "telefone": "(61) 2017-1145",
+      "latitude": -15.8825,
+      "longitude": -48.0169
+    },
+    {
+      "cnes": "6665098",
+      "nome": "CAPS III SAMAMBAIA",
+      "modalidade": "CAPS_III",
+      "codigo_ibge": "5300108",
+      "endereco": "Quadra 302, Conjunto 5, Lote 1, Centro Urbano",
+      "bairro": "Samambaia",
+      "telefone": "(61) 98549-5372",
+      "latitude": -15.8764,
+      "longitude": -48.0861
+    },
+    {
+      "cnes": "8479704",
+      "nome": "CAPS III GAMA",
+      "modalidade": "CAPS_III",
+      "codigo_ibge": "5300108",
+      "endereco": "Área Especial, Setor Central",
+      "bairro": "Gama",
+      "telefone": "(61) 2017-1145",
+      "latitude": -16.0189,
+      "longitude": -48.0644
+    },
+    {
+      "cnes": "9589724",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL I BRAZLANDIA",
+      "modalidade": "CAPS_I",
+      "codigo_ibge": "5300108",
+      "endereco": "Quadra 01, AE 2, Setor Veredas",
+      "bairro": "Brazlândia",
+      "telefone": "(61) 2017-1300",
+      "latitude": -15.6725,
+      "longitude": -48.1969
+    },
+    {
+      "cnes": "7740794",
+      "nome": "CAPSI ASA NORTE",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "5300108",
+      "endereco": "SMHN, Quadra 03, Conjunto 1, Bloco A, Ed. COMPP",
+      "bairro": "Asa Norte",
+      "telefone": "(61) 2017-1900",
+      "latitude": -15.7836,
+      "longitude": -47.8858
+    },
+    {
+      "cnes": "7238703",
+      "nome": "CAPS INFANTO JUVENIL TAGUATINGA",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "5300108",
+      "endereco": "QNF, Área Especial 24",
+      "bairro": "Taguatinga Norte",
+      "telefone": "(61) 2017-1145",
+      "latitude": -15.8114,
+      "longitude": -48.0672
+    },
+    {
+      "cnes": "7698437",
+      "nome": "CAPSI RECANTO DAS EMAS",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "5300108",
+      "endereco": "Quadra 307, Área Especial 1 (Centro de Saúde 1)",
+      "bairro": "Recanto das Emas",
+      "telefone": "(61) 2017-1145",
+      "latitude": -15.9083,
+      "longitude": -48.0628
+    },
+    {
+      "cnes": "7552270",
+      "nome": "CAPSI SOBRADINHO",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "5300108",
+      "endereco": "Quadra 4, Área Especial, Lote 6",
+      "bairro": "Sobradinho I",
+      "telefone": "(61) 2017-1145",
+      "latitude": -15.6531,
+      "longitude": -47.7922
+    },
+    {
+      "cnes": "0022691",
+      "nome": "CERSAM BARREIRO",
+      "modalidade": "CAPS_III",
+      "codigo_ibge": "3106200",
+      "endereco": "Rua Desembargador Ribeiro da Luz, 29",
+      "bairro": "Barreiro de Cima",
+      "telefone": "(31) 3277-5902",
+      "latitude": -19.9767,
+      "longitude": -44.0175
+    },
+    {
+      "cnes": "0022837",
+      "nome": "CERSAM LESTE",
+      "modalidade": "CAPS_III",
+      "codigo_ibge": "3106200",
+      "endereco": "Rua Pirite, 150",
+      "bairro": "Santa Tereza",
+      "telefone": "(31) 3277-5734",
+      "latitude": -19.9147,
+      "longitude": -43.9142
+    },
+    {
+      "cnes": "2695537",
+      "nome": "CERSAM OESTE",
+      "modalidade": "CAPS_III",
+      "codigo_ibge": "3106200",
+      "endereco": "Rua Oscar Trompowisk, 1325",
+      "bairro": "Grajaú",
+      "telefone": "(31) 98405-5544",
+      "latitude": -19.9389,
+      "longitude": -43.9631
+    },
+    {
+      "cnes": "2695707",
+      "nome": "CERSAM NORDESTE",
+      "modalidade": "CAPS_III",
+      "codigo_ibge": "3106200",
+      "endereco": "Praça 13 de Maio, s/n",
+      "bairro": "Nova Floresta",
+      "telefone": "(31) 3277-6067",
+      "latitude": -19.8936,
+      "longitude": -43.9281
+    },
+    {
+      "cnes": "2695715",
+      "nome": "CERSAM NOROESTE",
+      "modalidade": "CAPS_III",
+      "codigo_ibge": "3106200",
+      "endereco": "Rua Camarugi, 10",
+      "bairro": "Padre Eustáquio",
+      "telefone": "(31) 98445-1723",
+      "latitude": -19.9136,
+      "longitude": -43.9806
+    },
+    {
+      "cnes": "7602782",
+      "nome": "CERSAM NORTE",
+      "modalidade": "CAPS_III",
+      "codigo_ibge": "3106200",
+      "endereco": "Rua Parnaíba, 568",
+      "bairro": "Minaslândia",
+      "telefone": "(31) 98394-6076",
+      "latitude": -19.8397,
+      "longitude": -43.9253
+    },
+    {
+      "cnes": "0023523",
+      "nome": "CERSAM PAMPULHA",
+      "modalidade": "CAPS_III",
+      "codigo_ibge": "3106200",
+      "endereco": "Rua do Mel, 77",
+      "bairro": "Santa Branca",
+      "telefone": "(31) 98418-6569",
+      "latitude": -19.8408,
+      "longitude": -43.9669
+    },
+    {
+      "cnes": "2695529",
+      "nome": "CERSAM VENDA NOVA",
+      "modalidade": "CAPS_III",
+      "codigo_ibge": "3106200",
+      "endereco": "Rua João Lourival Dias, 252",
+      "bairro": "Silveira",
+      "telefone": "(31) 98458-0599",
+      "latitude": -19.8186,
+      "longitude": -43.9614
+    },
+    {
+      "cnes": "2695693",
+      "nome": "CERSAMI NOROESTE",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "3106200",
+      "endereco": "Rua Manhumirim, 415",
+      "bairro": "Padre Eustáquio",
+      "telefone": "(31) 98451-5085",
+      "latitude": -19.9144,
+      "longitude": -43.9822
+    },
+    {
+      "cnes": "9109285",
+      "nome": "CERSAMI NORDESTE",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "3106200",
+      "endereco": "Praça Muqui, 155",
+      "bairro": "Renascença",
+      "telefone": "(31) 3246-7566",
+      "latitude": -19.8886,
+      "longitude": -43.9333
+    },
+    {
+      "cnes": "0026697",
+      "nome": "CERSAMI CENTRO SUL",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "3106200",
+      "endereco": "Rua Padre Marinho, 150",
+      "bairro": "Santa Efigênia",
+      "telefone": "(31) 98553-8097",
+      "latitude": -19.9258,
+      "longitude": -43.9231
+    },
+    {
+      "cnes": "7286848",
+      "nome": "CERSAM AD BARREIRO",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "3106200",
+      "endereco": "Rua Barão de Monte Alto, 211",
+      "bairro": "Cardoso",
+      "telefone": "(31) 3277-3631",
+      "latitude": -19.9883,
+      "longitude": -44.0186
+    },
+    {
+      "cnes": "0027626",
+      "nome": "CERSAM AD CENTRO SUL",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "3106200",
+      "endereco": "Alameda Ezequiel Dias, 365",
+      "bairro": "Santa Efigênia",
+      "telefone": "(31) 3217-9000",
+      "latitude": -19.9242,
+      "longitude": -43.9308
+    },
+    {
+      "cnes": "7344554",
+      "nome": "CERSAM AD NORDESTE",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "3106200",
+      "endereco": "Rua Andiroba, 100",
+      "bairro": "São Paulo",
+      "telefone": "(31) 98888-3489",
+      "latitude": -19.8736,
+      "longitude": -43.9169
+    },
+    {
+      "cnes": "9891749",
+      "nome": "CERSAM AD PAMPULHA NOROESTE",
+      "modalidade": "CAPS_AD_III",
+      "codigo_ibge": "3106200",
+      "endereco": "Av. João XXIII, 1253",
+      "bairro": "Manacás",
+      "telefone": "(31) 3277-8301",
+      "latitude": -19.8931,
+      "longitude": -43.9978
+    },
+    {
+      "cnes": "5925053",
+      "nome": "CERSAM AD VENDA NOVA",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "3106200",
+      "endereco": "Praça José Belém Barbosa, 255",
+      "bairro": "São João Batista",
+      "telefone": "(31) 98353-5490",
+      "latitude": -19.8211,
+      "longitude": -43.9575
+    },
+    {
+      "cnes": "6883222",
+      "nome": "CAPS II ALTOS DA GLORIA",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "4314902",
+      "endereco": "Av. Oscar Pereira, nº 3391",
+      "bairro": "Cascata",
+      "telefone": "(51) 3289-8258",
+      "latitude": -30.0825,
+      "longitude": -51.1967
+    },
+    {
+      "cnes": "6487734",
+      "nome": "CAPS II BEM VIVER GHC",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "4314902",
+      "endereco": "Rua Marco Polo, nº 278",
+      "bairro": "Cristo Redentor",
+      "telefone": "(51) 3337-0726",
+      "latitude": -30.0114,
+      "longitude": -51.1583
+    },
+    {
+      "cnes": "2264323",
+      "nome": "CAPS II CENTRO (CAIS MENTAL)",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "4314902",
+      "endereco": "Av. José Bonifácio, nº 71",
+      "bairro": "Bom Fim",
+      "telefone": "(51) 3289-5519",
+      "latitude": -30.0358,
+      "longitude": -51.2144
+    },
+    {
+      "cnes": "2237717",
+      "nome": "CAPS II FLOR DE MAIO",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "4314902",
+      "endereco": "Rua Dr. Campos Velho, 1718",
+      "bairro": "Cristal",
+      "telefone": "(51) 3289-5728",
+      "latitude": -30.0953,
+      "longitude": -51.2336
+    },
+    {
+      "cnes": "7364881",
+      "nome": "CAPS II HCPA",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "4314902",
+      "endereco": "Rua São Manoel, nº 285",
+      "bairro": "Rio Branco",
+      "telefone": "(51) 3359-8710",
+      "latitude": -30.0389,
+      "longitude": -51.2069
+    },
+    {
+      "cnes": "8099189",
+      "nome": "CAPS III NORTE",
+      "modalidade": "CAPS_III",
+      "codigo_ibge": "4314902",
+      "endereco": "Rua Conde de Porto Alegre, nº 71",
+      "bairro": "Floresta",
+      "telefone": "(51) 3276-7013",
+      "latitude": -30.0211,
+      "longitude": -51.2089
+    },
+    {
+      "cnes": "2264293",
+      "nome": "CAPSI CASA HARMONIA",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "4314902",
+      "endereco": "Av. Loureiro da Silva, nº 1995",
+      "bairro": "Cidade Baixa",
+      "telefone": "(51) 3289-2690",
+      "latitude": -30.0394,
+      "longitude": -51.2242
+    },
+    {
+      "cnes": "6638988",
+      "nome": "CAPSI PANDORGA GHC",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "4314902",
+      "endereco": "Rua Dom Diogo de Souza, nº 429",
+      "bairro": "Cristo Redentor",
+      "telefone": "(51) 3340-1238",
+      "latitude": -30.0122,
+      "longitude": -51.1567
+    },
+    {
+      "cnes": "7364865",
+      "nome": "CAPSI HCPA (SUPIMPA)",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "4314902",
+      "endereco": "Rua São Manoel, nº 285",
+      "bairro": "Rio Branco",
+      "telefone": "(51) 3359-8712",
+      "latitude": -30.0391,
+      "longitude": -51.2071
+    },
+    {
+      "cnes": "6754090",
+      "nome": "CAPS AD II ESPERANCA",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "4314902",
+      "endereco": "Rua Raul Moreira, nº 253",
+      "bairro": "Cristal",
+      "telefone": "(51) 3289-5734",
+      "latitude": -30.0919,
+      "longitude": -51.2414
+    },
+    {
+      "cnes": "7535449",
+      "nome": "CAPS AD III PASSO A PASSO GHC",
+      "modalidade": "CAPS_AD_III",
+      "codigo_ibge": "4314902",
+      "endereco": "Av. Carneiro da Fontoura, nº 57",
+      "bairro": "Jardim São Pedro",
+      "telefone": "(51) 3345-1759",
+      "latitude": -30.0156,
+      "longitude": -51.1636
+    },
+    {
+      "cnes": "6255434",
+      "nome": "CAPS AD III SCS",
+      "modalidade": "CAPS_AD_III",
+      "codigo_ibge": "4314902",
+      "endereco": "Av. da Cavalhada, nº 1930",
+      "bairro": "Cavalhada",
+      "telefone": "(51) 3230-6364",
+      "latitude": -30.1058,
+      "longitude": -51.2289
+    },
+    {
+      "cnes": "7313810",
+      "nome": "CAPS AD III PLP",
+      "modalidade": "CAPS_AD_III",
+      "codigo_ibge": "4314902",
+      "endereco": "Rua Dona Firmina, nº 144",
+      "bairro": "São José",
+      "telefone": "(51) 3230-6360",
+      "latitude": -30.0628,
+      "longitude": -51.1667
+    },
+    {
+      "cnes": "9752692",
+      "nome": "CAPS AD III CAMINHOS DO SOL LENO",
+      "modalidade": "CAPS_AD_III",
+      "codigo_ibge": "4314902",
+      "endereco": "Av. Protásio Alves, nº 7585",
+      "bairro": "Alto Petrópolis",
+      "telefone": "(51) 3407-5225",
+      "latitude": -30.0397,
+      "longitude": -51.1275
+    },
+    {
+      "cnes": "9752706",
+      "nome": "CAPS AD III GIRASSOL RESTINGA EXTREMO SUL",
+      "modalidade": "CAPS_AD_III",
+      "codigo_ibge": "4314902",
+      "endereco": "Estrada João Antônio da Silveira, nº 440",
+      "bairro": "Restinga",
+      "telefone": "(51) 3248-7704",
+      "latitude": -30.1494,
+      "longitude": -51.1442
+    },
+    {
+      "cnes": "6290124",
+      "nome": "CAPS AD III PERNAMBUCO NHNI",
+      "modalidade": "CAPS_AD_III",
+      "codigo_ibge": "4314902",
+      "endereco": "Av. Pernambuco, 1700",
+      "bairro": "Navegantes",
+      "telefone": "(51) 3230-6362",
+      "latitude": -30.0022,
+      "longitude": -51.1969
+    },
+    {
+      "cnes": "9686576",
+      "nome": "CAPS AD IV CEU ABERTO CENTRO",
+      "modalidade": "CAPS_AD_III",
+      "codigo_ibge": "4314902",
+      "endereco": "Av. João Pessoa, 1318",
+      "bairro": "Farroupilha",
+      "telefone": "(51) 3230-6367",
+      "latitude": -30.0419,
+      "longitude": -51.2181
+    },
+    {
+      "cnes": "2223503",
+      "nome": "CAPS CIDADANIA",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "4305108",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -29.1678,
+      "longitude": -51.1794
+    },
+    {
+      "cnes": "2223511",
+      "nome": "CAPS REVIVER 24 HORAS",
+      "modalidade": "CAPS_AD_III",
+      "codigo_ibge": "4305108",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -29.17,
+      "longitude": -51.182
+    },
+    {
+      "cnes": "3731332",
+      "nome": "CAPSI CAXIAS DO SUL",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "4305108",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -29.165,
+      "longitude": -51.176
+    },
+    {
+      "cnes": "6755054",
+      "nome": "CAPS NOVO AMANHA",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "4305108",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -29.172,
+      "longitude": -51.175
+    },
+    {
+      "cnes": "6691757",
+      "nome": "CAPS AD III AMANHECER",
+      "modalidade": "CAPS_AD_III",
+      "codigo_ibge": "4304606",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -29.9178,
+      "longitude": -51.1836
+    },
+    {
+      "cnes": "3731278",
+      "nome": "CAPS AD III TRAVESSIA",
+      "modalidade": "CAPS_AD_III",
+      "codigo_ibge": "4304606",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -29.92,
+      "longitude": -51.18
+    },
+    {
+      "cnes": "2230267",
+      "nome": "CAPS II NOVOS TEMPOS",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "4304606",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -29.915,
+      "longitude": -51.186
+    },
+    {
+      "cnes": "6914853",
+      "nome": "CAPS III RECANTO DOS GIRASSOIS",
+      "modalidade": "CAPS_III",
+      "codigo_ibge": "4304606",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -29.912,
+      "longitude": -51.181
+    },
+    {
+      "cnes": "3885046",
+      "nome": "CAPS I ARCO IRIS",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "4304606",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -29.919,
+      "longitude": -51.185
+    },
+    {
+      "cnes": "3011518",
+      "nome": "CAPS AD III PELOTAS",
+      "modalidade": "CAPS_AD_III",
+      "codigo_ibge": "4314407",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -31.7654,
+      "longitude": -52.3376
+    },
+    {
+      "cnes": "2253704",
+      "nome": "CAPS BARONESA",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "4314407",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -31.76,
+      "longitude": -52.332
+    },
+    {
+      "cnes": "2253712",
+      "nome": "CAPS CASTELO",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "4314407",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -31.768,
+      "longitude": -52.34
+    },
+    {
+      "cnes": "3042979",
+      "nome": "CAPS ESCOLA",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "4314407",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -31.77,
+      "longitude": -52.335
+    },
+    {
+      "cnes": "2254158",
+      "nome": "CAPS FRAGATA",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "4314407",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -31.758,
+      "longitude": -52.36
+    },
+    {
+      "cnes": "3042952",
+      "nome": "CAPS PORTO",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "4314407",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -31.778,
+      "longitude": -52.33
+    },
+    {
+      "cnes": "3042960",
+      "nome": "CAPS ZONA NORTE",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "4314407",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -31.735,
+      "longitude": -52.342
+    },
+    {
+      "cnes": "6772609",
+      "nome": "CAPS I CANGURU",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "4314407",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -31.764,
+      "longitude": -52.339
+    },
+    {
+      "cnes": "3005461",
+      "nome": "CAPS AD CAMINHOS DO SOL",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "4316907",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -29.6842,
+      "longitude": -53.8069
+    },
+    {
+      "cnes": "7242239",
+      "nome": "CAPS AD CIA DO RECOMECO I",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "4316907",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -29.688,
+      "longitude": -53.81
+    },
+    {
+      "cnes": "2243997",
+      "nome": "CAPS II PRADO VEPPO",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "4316907",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -29.682,
+      "longitude": -53.804
+    },
+    {
+      "cnes": "3656411",
+      "nome": "CAPS INFANTIL O EQUILIBRISTA",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "4316907",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -29.686,
+      "longitude": -53.808
+    },
+    {
+      "cnes": "2230003",
+      "nome": "CAPS AD CENTRO DE ATENCAO PSICOSSOCIAL ALCOOL E DROGAS",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "4309209",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -29.9444,
+      "longitude": -50.9919
+    },
+    {
+      "cnes": "3409813",
+      "nome": "CAPS II GRAVATAI",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "4309209",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -29.942,
+      "longitude": -50.994
+    },
+    {
+      "cnes": "7165129",
+      "nome": "CAPS I FLOR DE LOTUS",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "4309209",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -29.946,
+      "longitude": -50.99
+    },
+    {
+      "cnes": "6325572",
+      "nome": "CAPS II CANUDOS",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "4313409",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -29.6783,
+      "longitude": -51.1306
+    },
+    {
+      "cnes": "5516412",
+      "nome": "CAPS II SANTO AFONSO",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "4313409",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -29.681,
+      "longitude": -51.134
+    },
+    {
+      "cnes": "3019942",
+      "nome": "CAPS III AD NH",
+      "modalidade": "CAPS_AD_III",
+      "codigo_ibge": "4313409",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -29.676,
+      "longitude": -51.128
+    },
+    {
+      "cnes": "2230984",
+      "nome": "SERVICO DE ATENDIMENTO A CRIANCA E AO ADOLESCENTE NH CAPS I",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "4313409",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -29.679,
+      "longitude": -51.132
+    },
+    {
+      "cnes": "3544478",
+      "nome": "CAPS II AD NOVA VIDA VIAMAO",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "4323002",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -30.0811,
+      "longitude": -51.0233
+    },
+    {
+      "cnes": "2231166",
+      "nome": "CAPS II CASA AZUL VIAMAO",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "4323002",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -30.083,
+      "longitude": -51.021
+    },
+    {
+      "cnes": "3544486",
+      "nome": "CAPS II CENTRO RENASCER VIAMAO",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "4323002",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -30.079,
+      "longitude": -51.025
+    },
+    {
+      "cnes": "7052278",
+      "nome": "CAPS INFANTIL VIAMAO",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "4323002",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -30.08,
+      "longitude": -51.022
+    },
+    {
+      "cnes": "6850812",
+      "nome": "CAPS AD SAO LEOPOLDO",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "4318705",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -29.7603,
+      "longitude": -51.1472
+    },
+    {
+      "cnes": "2230755",
+      "nome": "CAPS CAPILE",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "4318705",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -29.762,
+      "longitude": -51.145
+    },
+    {
+      "cnes": "6850804",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL INFANTIL AQUARELA",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "4318705",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -29.759,
+      "longitude": -51.149
+    },
+    {
+      "cnes": "5410010",
+      "nome": "CAPS AD VIDA PMPF",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "4314100",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -28.2628,
+      "longitude": -52.4067
+    },
+    {
+      "cnes": "2245906",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL NOSSO ESPACO CAPS II PMPF",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "4314100",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -28.265,
+      "longitude": -52.409
+    },
+    {
+      "cnes": "9156577",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL INFANTIL CAPS INFANTIL PMPF",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "4314100",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -28.261,
+      "longitude": -52.404
+    },
+    {
+      "cnes": "6246052",
+      "nome": "CAPS AD RIO GRANDE",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "4315602",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -32.035,
+      "longitude": -52.0986
+    },
+    {
+      "cnes": "2817829",
+      "nome": "CAPS CONVIVER RIO GRANDE",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "4315602",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -32.037,
+      "longitude": -52.101
+    },
+    {
+      "cnes": "6539580",
+      "nome": "CAPS I SERELEPE",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "4315602",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -32.033,
+      "longitude": -52.096
+    },
+    {
+      "cnes": "6187528",
+      "nome": "CAPS AD ALVORADA",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "4300604",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -29.9914,
+      "longitude": -51.0808
+    },
+    {
+      "cnes": "8008825",
+      "nome": "CAPS II MUNDO NOVO",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "4300604",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -29.993,
+      "longitude": -51.083
+    },
+    {
+      "cnes": "3582760",
+      "nome": "CAPS INFANTIL ALVORADA",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "4300604",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -29.989,
+      "longitude": -51.078
+    },
+    {
+      "cnes": "4193695",
+      "nome": "CAPS AD GIRASSOIS",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "4303103",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -29.9511,
+      "longitude": -51.0939
+    },
+    {
+      "cnes": "6368875",
+      "nome": "CAPS II ADULTO ESPERANCA",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "4303103",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -29.953,
+      "longitude": -51.091
+    },
+    {
+      "cnes": "2231433",
+      "nome": "CAPS IJ CACHOEIRINHA",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "4303103",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -29.949,
+      "longitude": -51.096
+    },
+    {
+      "cnes": "5031486",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL ALCOOL E OUTRAS DROGAS III",
+      "modalidade": "CAPS_AD_III",
+      "codigo_ibge": "4316808",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -29.7175,
+      "longitude": -52.4258
+    },
+    {
+      "cnes": "2254972",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL II SANTA CRUZ DO SUL",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "4316808",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -29.719,
+      "longitude": -52.428
+    },
+    {
+      "cnes": "2255839",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL INFANCIA E ADOLESCENCIA",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "4316808",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -29.716,
+      "longitude": -52.423
+    },
+    {
+      "cnes": "6302572",
+      "nome": "CAPS AD PASSARELA",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "4320008",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -29.8278,
+      "longitude": -51.1447
+    },
+    {
+      "cnes": "4067711",
+      "nome": "CAPS II BEM ESTAR",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "4320008",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -29.829,
+      "longitude": -51.147
+    },
+    {
+      "cnes": "7648677",
+      "nome": "CAPS INFANTIL SAPUCAIA DO SUL",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "4320008",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -29.826,
+      "longitude": -51.142
+    },
+    {
+      "cnes": "6473830",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL ALCOOL E DROGAS BENTO GONCALVES",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "4302105",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -29.1714,
+      "longitude": -51.5192
+    },
+    {
+      "cnes": "2236621",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL II BENTO GONCALVES",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "4302105",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -29.173,
+      "longitude": -51.521
+    },
+    {
+      "cnes": "6039456",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL INFANTO JUVENIL BENTO GONCALVES",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "4302105",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -29.169,
+      "longitude": -51.517
+    },
+    {
+      "cnes": "3558207",
+      "nome": "CAPS AD BAGE",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "4301602",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -31.3314,
+      "longitude": -54.1069
+    },
+    {
+      "cnes": "2261308",
+      "nome": "CAPS II SERVICO SAUDE MENTAL BAGE",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "4301602",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -31.333,
+      "longitude": -54.109
+    },
+    {
+      "cnes": "7841981",
+      "nome": "CAPS INFANTO JUVENIL MATHILDE FAYAD",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "4301602",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -31.329,
+      "longitude": -54.105
+    },
+    {
+      "cnes": "7119704",
+      "nome": "CAPS AD RECOMECAR URUGUAIANA",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "4322400",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -29.7547,
+      "longitude": -57.0883
+    },
+    {
+      "cnes": "2248166",
+      "nome": "SERVICO DE SAUDE MENTAL URUGUAIANA",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "4322400",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -29.757,
+      "longitude": -57.09
+    },
+    {
+      "cnes": "4320131",
+      "nome": "SESAU CENTRO DE ATENCAO PSICOSSOCIAL AD III GUANANDI",
+      "modalidade": "CAPS_AD_III",
+      "codigo_ibge": "5002704",
+      "endereco": null,
+      "bairro": "Guanandi",
+      "telefone": null,
+      "latitude": -20.491,
+      "longitude": -54.639
+    },
+    {
+      "cnes": "3973611",
+      "nome": "SESAU CENTRO DE ATENCAO PSICOSSOCIAL AD IV FATIMA M MEDEIROS",
+      "modalidade": "CAPS_AD_III",
+      "codigo_ibge": "5002704",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -20.4697,
+      "longitude": -54.6201
+    },
+    {
+      "cnes": "6075371",
+      "nome": "SESAU CENTRO DE ATENCAO PSICOSSOCIAL III AERO RANCHO",
+      "modalidade": "CAPS_III",
+      "codigo_ibge": "5002704",
+      "endereco": null,
+      "bairro": "Aero Rancho",
+      "telefone": null,
+      "latitude": -20.515,
+      "longitude": -54.645
+    },
+    {
+      "cnes": "5456185",
+      "nome": "SESAU CENTRO DE ATENCAO PSICOSSOCIAL III AFRODITE D CONTIS",
+      "modalidade": "CAPS_III",
+      "codigo_ibge": "5002704",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -20.455,
+      "longitude": -54.61
+    },
+    {
+      "cnes": "0010359",
+      "nome": "SESAU CENTRO DE ATENCAO PSICOSSOCIAL III MARGARIDA",
+      "modalidade": "CAPS_III",
+      "codigo_ibge": "5002704",
+      "endereco": null,
+      "bairro": "Margarida",
+      "telefone": null,
+      "latitude": -20.435,
+      "longitude": -54.602
+    },
+    {
+      "cnes": "5617693",
+      "nome": "SESAU CENTRO DE ATENCAO PSICOSSOCIAL III VILA ALMEIDA",
+      "modalidade": "CAPS_III",
+      "codigo_ibge": "5002704",
+      "endereco": null,
+      "bairro": "Vila Almeida",
+      "telefone": null,
+      "latitude": -20.458,
+      "longitude": -54.658
+    },
+    {
+      "cnes": "3646432",
+      "nome": "SESAU CENTRO DE ATENCAO PSICOSSOCIAL INFANTO JUVENIL III",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "5002704",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -20.465,
+      "longitude": -54.615
+    },
+    {
+      "cnes": "3239845",
+      "nome": "CAPS AD CENTRO DE ATENCAO PSICOSSOCIAL ALCOOL E DROGAS II",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "5003702",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.2211,
+      "longitude": -54.8056
+    },
+    {
+      "cnes": "2710927",
+      "nome": "CAPS II CENTRO DE ATENCAO PSICOSSOCIAL TIPO 2",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "5003702",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.223,
+      "longitude": -54.808
+    },
+    {
+      "cnes": "0520020",
+      "nome": "CAPSI CENTRO DE ATENCAO PSICOSSOCIAL INFANTOJUVENIL DOURADOS",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "5003702",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.219,
+      "longitude": -54.803
+    },
+    {
+      "cnes": "6726747",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL ALCOOL E OUTRAS DROGAS CAPSAD",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "5008305",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -20.7511,
+      "longitude": -51.6783
+    },
+    {
+      "cnes": "3475298",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL TRES LAGOAS MS",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "5008305",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -20.753,
+      "longitude": -51.68
+    },
+    {
+      "cnes": "6356486",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL ALCOOL E DROGAS CORUMBA",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "5003207",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -19.0092,
+      "longitude": -57.6533
+    },
+    {
+      "cnes": "6587720",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL INFANTIL DE CORUMBA",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "5003207",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -19.011,
+      "longitude": -57.655
+    },
+    {
+      "cnes": "2376156",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL JOSE FRAGELLI",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "5003207",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -19.007,
+      "longitude": -57.651
+    },
+    {
+      "cnes": "9507396",
+      "nome": "CAPS II CENTRO DE ATENCAO PSICOSSOCIAL PONTA PORA",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "5006606",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.5361,
+      "longitude": -55.7256
+    },
+    {
+      "cnes": "0963089",
+      "nome": "CAPS INFANTO JUVENIL PONTA PORA",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "5006606",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.538,
+      "longitude": -55.728
+    },
+    {
+      "cnes": "2710382",
+      "nome": "CAPSAD PRINCESINHA DOS ERVAIS",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "5006606",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.534,
+      "longitude": -55.723
+    },
+    {
+      "cnes": "3785122",
+      "nome": "CAPS AD ADAUTO BOTELHO",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "5103403",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -15.6014,
+      "longitude": -56.0979
+    },
+    {
+      "cnes": "3276635",
+      "nome": "CAPS AD ADOLESCER",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "5103403",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -15.599,
+      "longitude": -56.095
+    },
+    {
+      "cnes": "2659123",
+      "nome": "CAPS II CPA IV",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "5103403",
+      "endereco": null,
+      "bairro": "CPA IV",
+      "telefone": null,
+      "latitude": -15.565,
+      "longitude": -56.055
+    },
+    {
+      "cnes": "5449758",
+      "nome": "CAPS II VERDAO",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "5103403",
+      "endereco": null,
+      "bairro": "Verdão",
+      "telefone": null,
+      "latitude": -15.604,
+      "longitude": -56.118
+    },
+    {
+      "cnes": "4069668",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL INFANTO JUVENIL CURUMIM",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "5103403",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -15.603,
+      "longitude": -56.1
+    },
+    {
+      "cnes": "3590224",
+      "nome": "CAPS AD ALCOOL E DROGAS VARZEA GRANDE",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "5108402",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -15.6467,
+      "longitude": -56.1325
+    },
+    {
+      "cnes": "3028038",
+      "nome": "CAPS III DE VARZEA GRANDE",
+      "modalidade": "CAPS_III",
+      "codigo_ibge": "5108402",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -15.649,
+      "longitude": -56.135
+    },
+    {
+      "cnes": "6598048",
+      "nome": "CAPS INFANTO JUVENIL VARZEA GRANDE",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "5108402",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -15.644,
+      "longitude": -56.13
+    },
+    {
+      "cnes": "2396440",
+      "nome": "CAPS AFRO CARLOS STEFANINI BATISTA",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "5107602",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -16.4708,
+      "longitude": -54.6356
+    },
+    {
+      "cnes": "3274594",
+      "nome": "CAPS INFANTIL RONDONOPOLIS",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "5107602",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -16.473,
+      "longitude": -54.638
+    },
+    {
+      "cnes": "2768089",
+      "nome": "CAPS SINOP",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "5107909",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -11.8642,
+      "longitude": -55.5025
+    },
+    {
+      "cnes": "4034880",
+      "nome": "CAPSI SINOP",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "5107909",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -11.866,
+      "longitude": -55.505
+    },
+    {
+      "cnes": "3161919",
+      "nome": "CAPS NOVA VIDA SORRISO",
+      "modalidade": "CAPS_I",
+      "codigo_ibge": "5107925",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -12.5453,
+      "longitude": -55.7114
+    },
+    {
+      "cnes": "9982094",
+      "nome": "CAPSI INTEGRAR SORRISO",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "5107925",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -12.547,
+      "longitude": -55.714
+    },
+    {
+      "cnes": "3876411",
+      "nome": "CAPS II CENTRO NORTE",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "2211001",
+      "endereco": null,
+      "bairro": "Centro Norte",
+      "telefone": null,
+      "latitude": -5.08,
+      "longitude": -42.81
+    },
+    {
+      "cnes": "3866246",
+      "nome": "CAPS II LESTE SUDESTE",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "2211001",
+      "endereco": null,
+      "bairro": "Sudeste",
+      "telefone": null,
+      "latitude": -5.095,
+      "longitude": -42.77
+    },
+    {
+      "cnes": "6472869",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL CAPS II SUDESTE",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "2211001",
+      "endereco": null,
+      "bairro": "Sudeste",
+      "telefone": null,
+      "latitude": -5.105,
+      "longitude": -42.765
+    },
+    {
+      "cnes": "6617212",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL CAPS III SUL",
+      "modalidade": "CAPS_III",
+      "codigo_ibge": "2211001",
+      "endereco": null,
+      "bairro": "Sul",
+      "telefone": null,
+      "latitude": -5.12,
+      "longitude": -42.8
+    },
+    {
+      "cnes": "6427219",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL SUL",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "2211001",
+      "endereco": null,
+      "bairro": "Sul",
+      "telefone": null,
+      "latitude": -5.115,
+      "longitude": -42.805
+    },
+    {
+      "cnes": "0754994",
+      "nome": "CAPS INFANTO JUVENIL TERESINA",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "2211001",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -5.0892,
+      "longitude": -42.8019
+    },
+    {
+      "cnes": "3660796",
+      "nome": "CAPS INFANTO JUVENIL DR MARTINELLI CAVALCA",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "2211001",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -5.086,
+      "longitude": -42.798
+    },
+    {
+      "cnes": "3788032",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL ALCOOL E DROGA DR CLIDENOR",
+      "modalidade": "CAPS_AD_III",
+      "codigo_ibge": "2211001",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -5.091,
+      "longitude": -42.804
+    },
+    {
+      "cnes": "2323222",
+      "nome": "CAPS II DR VALTERDES M DE SAMPAIO",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "2207702",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -2.9047,
+      "longitude": -41.7767
+    },
+    {
+      "cnes": "3838196",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL ALCOOL E DROGA CAPS 24 H",
+      "modalidade": "CAPS_AD_III",
+      "codigo_ibge": "2207702",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -2.907,
+      "longitude": -41.779
+    },
+    {
+      "cnes": "5073340",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL CAPS AD PICOS",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "2208007",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -7.0769,
+      "longitude": -41.4669
+    },
+    {
+      "cnes": "7855567",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL CAPS II PICOS",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "2208007",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -7.079,
+      "longitude": -41.469
+    },
+    {
+      "cnes": "6047637",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL ALCOOL E DROGAS CAPS AD PIRIPIRI",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "2208403",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -4.2733,
+      "longitude": -41.7769
+    },
+    {
+      "cnes": "3562484",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL CAPS II DE PIRIPIRI",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "2208403",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -4.275,
+      "longitude": -41.779
+    },
+    {
+      "cnes": "6970419",
+      "nome": "CAPS AD III FLORIANO",
+      "modalidade": "CAPS_AD_III",
+      "codigo_ibge": "2203909",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -6.7669,
+      "longitude": -43.0225
+    },
+    {
+      "cnes": "3888355",
+      "nome": "CAPS II CENTRO DE ATENCAO PSICOSSOCIAL DE FLORIANO",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "2203909",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -6.769,
+      "longitude": -43.025
+    },
+    {
+      "cnes": "2579375",
+      "nome": "CAPS AD ALCOOL E DROGAS DE LONDRINA",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "4113700",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -23.3045,
+      "longitude": -51.1696
+    },
+    {
+      "cnes": "2579308",
+      "nome": "CAPS I NUCL ATENCAO PSICO SOCIAL A CRIANCA E ADOLESCENTE",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "4113700",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -23.307,
+      "longitude": -51.172
+    },
+    {
+      "cnes": "2579316",
+      "nome": "CAPS III CENTRO DE ATENCAO PSICOSOCIAL LONDRINA",
+      "modalidade": "CAPS_III",
+      "codigo_ibge": "4113700",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -23.302,
+      "longitude": -51.167
+    },
+    {
+      "cnes": "5526175",
+      "nome": "CAPS IJ VITORIA",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "3205309",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -20.3155,
+      "longitude": -40.3128
+    },
+    {
+      "cnes": "0012351",
+      "nome": "CAPS II VITORIA",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "3205309",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -20.318,
+      "longitude": -40.315
+    },
+    {
+      "cnes": "7603592",
+      "nome": "CAPS III VITORIA",
+      "modalidade": "CAPS_III",
+      "codigo_ibge": "3205309",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -20.313,
+      "longitude": -40.31
+    },
+    {
+      "cnes": "0012041",
+      "nome": "CAPS AD III VITORIA",
+      "modalidade": "CAPS_AD_III",
+      "codigo_ibge": "3205309",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -20.316,
+      "longitude": -40.318
+    },
+    {
+      "cnes": "9473963",
+      "nome": "CAPS IJ VILA VELHA",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "3205200",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -20.3297,
+      "longitude": -40.2925
+    },
+    {
+      "cnes": "9736301",
+      "nome": "CAPS II VILA VELHA",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "3205200",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -20.332,
+      "longitude": -40.295
+    },
+    {
+      "cnes": "3461777",
+      "nome": "CAPS AD II VILA VELHA",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "3205200",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -20.327,
+      "longitude": -40.29
+    },
+    {
+      "cnes": "9266453",
+      "nome": "CAPS IJ SERRA",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "3205002",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -20.1286,
+      "longitude": -40.3078
+    },
+    {
+      "cnes": "5986656",
+      "nome": "CAPS II SERRA",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "3205002",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -20.131,
+      "longitude": -40.31
+    },
+    {
+      "cnes": "3972909",
+      "nome": "CAPS AD II SERRA",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "3205002",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -20.126,
+      "longitude": -40.305
+    },
+    {
+      "cnes": "0048720",
+      "nome": "CAPS IJ CARIACICA",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "3201308",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -20.2639,
+      "longitude": -40.42
+    },
+    {
+      "cnes": "7342128",
+      "nome": "CAPS II CIDADE CARIACICA",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "3201308",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -20.266,
+      "longitude": -40.423
+    },
+    {
+      "cnes": "3773582",
+      "nome": "CAPS II MOXUARA CARIACICA",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "3201308",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -20.261,
+      "longitude": -40.417
+    },
+    {
+      "cnes": "3744264",
+      "nome": "CAPS II CACHOEIRO DE ITAPEMIRIM",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "3201209",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -20.8489,
+      "longitude": -41.1128
+    },
+    {
+      "cnes": "6957986",
+      "nome": "CAPS AD II CACHOEIRO DE ITAPEMIRIM",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "3201209",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -20.851,
+      "longitude": -41.115
+    },
+    {
+      "cnes": "3462951",
+      "nome": "CAPS II LINHARES",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "3203205",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -19.3911,
+      "longitude": -40.0722
+    },
+    {
+      "cnes": "3467678",
+      "nome": "CAPS II GUARAPARI",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "3202405",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -20.6739,
+      "longitude": -40.4975
+    },
+    {
+      "cnes": "0974595",
+      "nome": "CAPS AD II GUARAPARI",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "3202405",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -20.676,
+      "longitude": -40.5
+    },
+    {
+      "cnes": "3454339",
+      "nome": "CAPS I SAO MATEUS",
+      "modalidade": "CAPS_I",
+      "codigo_ibge": "3204906",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -18.7161,
+      "longitude": -39.8589
+    },
+    {
+      "cnes": "7612680",
+      "nome": "CAPS AD SAO MATEUS",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "3204906",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -18.718,
+      "longitude": -39.861
+    },
+    {
+      "cnes": "7236158",
+      "nome": "CAPS AD COLATINA",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "3201506",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -19.5394,
+      "longitude": -40.6306
+    },
+    {
+      "cnes": "2705540",
+      "nome": "CAPS II COLATINA",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "3201506",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -19.541,
+      "longitude": -40.633
+    },
+    {
+      "cnes": "9029354",
+      "nome": "SMS CAPS CARLOS AUGUSTO DA SILVA MAGAL AP 31",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "3304557",
+      "endereco": "Avenida Dom Hélder Câmara, 1390, fundos",
+      "bairro": "Manguinhos",
+      "telefone": "(21) 2201-0180",
+      "latitude": -22.8808,
+      "longitude": -43.2519
+    },
+    {
+      "cnes": "3567494",
+      "nome": "SMS CAPS ERNESTO NAZARETH AP 31",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "3304557",
+      "endereco": "Avenida Paranapuã, 435",
+      "bairro": "Freguesia (Ilha do Governador)",
+      "telefone": "(21) 3367-5145",
+      "latitude": -22.8025,
+      "longitude": -43.1806
+    },
+    {
+      "cnes": "5240832",
+      "nome": "SMS CAPS FERNANDO DINIZ",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "3304557",
+      "endereco": "Rua Leopoldina Rego, 754",
+      "bairro": "Olaria",
+      "telefone": "(21) 3867-1319",
+      "latitude": -22.8469,
+      "longitude": -43.2683
+    },
+    {
+      "cnes": "5346320",
+      "nome": "SMS CAPS III CLARICE LISPECTOR AP 32",
+      "modalidade": "CAPS_III",
+      "codigo_ibge": "3304557",
+      "endereco": "Rua Dois de Fevereiro, 785A",
+      "bairro": "Encantado",
+      "telefone": "(21) 3111-7490",
+      "latitude": -22.8967,
+      "longitude": -43.3014
+    },
+    {
+      "cnes": "5313783",
+      "nome": "SMS CAPS DIRCINHA E LINDA BATISTA AP 33",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "3304557",
+      "endereco": "Rua Jornalista Hermano Requião, 447",
+      "bairro": "Guadalupe",
+      "telefone": "(21) 2475-4917",
+      "latitude": -22.8392,
+      "longitude": -43.3742
+    },
+    {
+      "cnes": "3403238",
+      "nome": "SMS CAPS III RUBENS CORREA AP 33",
+      "modalidade": "CAPS_III",
+      "codigo_ibge": "3304557",
+      "endereco": "Rua Capitão Aliatar Martins, 231",
+      "bairro": "Irajá",
+      "telefone": "(21) 3833-3340",
+      "latitude": -22.8336,
+      "longitude": -43.3258
+    },
+    {
+      "cnes": "3018091",
+      "nome": "SMS CAPS III LIMA BARRETO AP 51",
+      "modalidade": "CAPS_III",
+      "codigo_ibge": "3304557",
+      "endereco": "Avenida Ribeiro Dantas, 571",
+      "bairro": "Bangu",
+      "telefone": "(21) 3462-5449",
+      "latitude": -22.8781,
+      "longitude": -43.4653
+    },
+    {
+      "cnes": "7926103",
+      "nome": "SMS CAPS NEUSA SANTOS SOUZA AP 51",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "3304557",
+      "endereco": "Rua Baalbeck, 75",
+      "bairro": "Senador Camará",
+      "telefone": "(21) 3613-8285",
+      "latitude": -22.8856,
+      "longitude": -43.4922
+    },
+    {
+      "cnes": "2708388",
+      "nome": "SMS CAPS PEDRO PELLEGRINO AP 52",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "3304557",
+      "endereco": "Praça Major Vieira de Mello, 13 (fundos)",
+      "bairro": "Campo Grande",
+      "telefone": "(21) 3394-2583",
+      "latitude": -22.9036,
+      "longitude": -43.5592
+    },
+    {
+      "cnes": "3567532",
+      "nome": "SMS CAPS PROFETA GENTILEZA AP 52",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "3304557",
+      "endereco": "Estrada de Inhoaíba, 849",
+      "bairro": "Inhoaíba",
+      "telefone": "(21) 3402-6835",
+      "latitude": -22.9125,
+      "longitude": -43.5931
+    },
+    {
+      "cnes": "2708396",
+      "nome": "SMS CAPS SIMAO BACAMARTE AP 53",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "3304557",
+      "endereco": "Avenida Senador Camará, 224",
+      "bairro": "Santa Cruz",
+      "telefone": "(21) 3365-8775",
+      "latitude": -22.9189,
+      "longitude": -43.6844
+    },
+    {
+      "cnes": "7884524",
+      "nome": "SMS CAPS FRANCO BASAGLIA AP 21",
+      "modalidade": "CAPS_III",
+      "codigo_ibge": "3304557",
+      "endereco": "Avenida Venceslau Brás, 65, fundos",
+      "bairro": "Botafogo",
+      "telefone": "(21) 2542-6761",
+      "latitude": -22.9525,
+      "longitude": -43.1764
+    },
+    {
+      "cnes": "6551556",
+      "nome": "SMS CAPS MARIA DO SOCORRO SANTOS AP 21",
+      "modalidade": "CAPS_III",
+      "codigo_ibge": "3304557",
+      "endereco": "Estrada da Gávea, 520",
+      "bairro": "Rocinha",
+      "telefone": "(21) 3322-6368",
+      "latitude": -22.9883,
+      "longitude": -43.2481
+    },
+    {
+      "cnes": "6527027",
+      "nome": "SMS CAPS JOAO FERREIRA SILVA FILHO AP 31",
+      "modalidade": "CAPS_III",
+      "codigo_ibge": "3304557",
+      "endereco": "Estrada do Itararé, 951",
+      "bairro": "Ramos",
+      "telefone": "(21) 2270-8688",
+      "latitude": -22.8586,
+      "longitude": -43.2697
+    },
+    {
+      "cnes": "5874408",
+      "nome": "SMS CAPS III TORQUATO NETO AP 32",
+      "modalidade": "CAPS_III",
+      "codigo_ibge": "3304557",
+      "endereco": "Estrada Adhemar Bebiano, 339",
+      "bairro": "Del Castilho",
+      "telefone": "(21) 3111-6720",
+      "latitude": -22.8794,
+      "longitude": -43.2731
+    },
+    {
+      "cnes": "9535896",
+      "nome": "SMS CAPS III EAT SEVERINO DOS SANTOS AP 32",
+      "modalidade": "CAPS_III",
+      "codigo_ibge": "3304557",
+      "endereco": "Rua Dois de Fevereiro, 635",
+      "bairro": "Engenho de Dentro",
+      "telefone": "(21) 3111-7452",
+      "latitude": -22.8953,
+      "longitude": -43.2989
+    },
+    {
+      "cnes": "5034272",
+      "nome": "SMS CAPS III ARTHUR BISPO DO ROSARIO AP 40",
+      "modalidade": "CAPS_III",
+      "codigo_ibge": "3304557",
+      "endereco": "Estrada Rodrigues Caldas, 3400",
+      "bairro": "Taquara (Jacarepaguá)",
+      "telefone": "(21) 2456-7537",
+      "latitude": -22.9317,
+      "longitude": -43.3942
+    },
+    {
+      "cnes": "9051538",
+      "nome": "SMS CAPS III MANOEL DE BARROS AP 40",
+      "modalidade": "CAPS_III",
+      "codigo_ibge": "3304557",
+      "endereco": "Avenida Nossa Senhora dos Remédios, s/nº",
+      "bairro": "Taquara",
+      "telefone": "(21) 3432-2246",
+      "latitude": -22.9278,
+      "longitude": -43.3881
+    },
+    {
+      "cnes": "7052006",
+      "nome": "SMS CAPSI III MAURICIO DE SOUSA AP 21",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "3304557",
+      "endereco": "Avenida Venceslau Brás, 65, fundos",
+      "bairro": "Botafogo",
+      "telefone": "(21) 3873-2416",
+      "latitude": -22.9522,
+      "longitude": -43.1761
+    },
+    {
+      "cnes": "7060335",
+      "nome": "SMS CAPSI VISCONDE DE SABUGOSA AP 31",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "3304557",
+      "endereco": "Avenida Guanabara, s/nº (Praia de Ramos)",
+      "bairro": "Ramos",
+      "telefone": "(21) 3884-9635",
+      "latitude": -22.8389,
+      "longitude": -43.2506
+    },
+    {
+      "cnes": "0425974",
+      "nome": "SMS CAPSI GUTTMANN BICHO AP 31",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "3304557",
+      "endereco": "Avenida Paranapuã, 435",
+      "bairro": "Freguesia (Ilha do Governador)",
+      "telefone": "(21) 3367-5145",
+      "latitude": -22.8028,
+      "longitude": -43.1809
+    },
+    {
+      "cnes": "5423430",
+      "nome": "SMS CAPSIII MARIA CLARA MACHADO AP 32",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "3304557",
+      "endereco": "Rua Honório, 461",
+      "bairro": "Todos os Santos",
+      "telefone": "(21) 3111-4168",
+      "latitude": -22.8939,
+      "longitude": -43.2856
+    },
+    {
+      "cnes": "7113137",
+      "nome": "SMS CAPSI HEITOR VILLA LOBOS AP 33",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "3304557",
+      "endereco": "Rua Padre Manso, s/nº",
+      "bairro": "Madureira",
+      "telefone": "(21) 3018-2201",
+      "latitude": -22.8753,
+      "longitude": -43.3375
+    },
+    {
+      "cnes": "3567516",
+      "nome": "SMS CAPSI III ELIZA SANTA ROZA AP 40",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "3304557",
+      "endereco": "Rua Sampaio Corrêa, 105",
+      "bairro": "Taquara (Jacarepaguá)",
+      "telefone": "(21) 3412-5601",
+      "latitude": -22.9244,
+      "longitude": -43.3767
+    },
+    {
+      "cnes": "2708418",
+      "nome": "SMS CAPSI PEQUENO HANS AP 51",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "3304557",
+      "endereco": "Rua Carlos Pontes, s/nº",
+      "bairro": "Jardim Sulacap",
+      "telefone": "(21) 3355-3887",
+      "latitude": -22.8831,
+      "longitude": -43.3989
+    },
+    {
+      "cnes": "6185045",
+      "nome": "SMS CAPSI JOAO DE BARRO AP 52",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "3304557",
+      "endereco": "Estrada do Campinho, s/nº (Santa Margarida)",
+      "bairro": "Campo Grande",
+      "telefone": "(21) 3394-2668",
+      "latitude": -22.8981,
+      "longitude": -43.575
+    },
+    {
+      "cnes": "4404076",
+      "nome": "SMS CAPSI MAFALDA AP 53",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "3304557",
+      "endereco": "Rua Álvaro Alberto, 601",
+      "bairro": "Santa Cruz",
+      "telefone": "(21) 99777-8166",
+      "latitude": -22.9214,
+      "longitude": -43.6811
+    },
+    {
+      "cnes": "4404017",
+      "nome": "SMS CAPSI ZIRALDO AP 22",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "3304557",
+      "endereco": "Rua General Canabarro, 345",
+      "bairro": "Maracanã",
+      "telefone": "(21) 2042-1939",
+      "latitude": -22.9114,
+      "longitude": -43.2256
+    },
+    {
+      "cnes": "2698846",
+      "nome": "UFRJ INST PSIQ CAPSI IPUB CARIM",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "3304557",
+      "endereco": "Avenida Venceslau Brás, 71, fundos",
+      "bairro": "Botafogo",
+      "telefone": "(21) 3938-5574",
+      "latitude": -22.9531,
+      "longitude": -43.1758
+    },
+    {
+      "cnes": "2280701",
+      "nome": "SMS CAPS AD II HELENO DE FREITAS AP 21",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "3304557",
+      "endereco": "Rua Dona Mariana, 151",
+      "bairro": "Botafogo",
+      "telefone": "(21) 2334-8109",
+      "latitude": -22.9536,
+      "longitude": -43.1869
+    },
+    {
+      "cnes": "6044697",
+      "nome": "SMS CAPS AD MANE GARRINCHA AP 22",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "3304557",
+      "endereco": "Avenida Professor Manoel de Abreu, 196",
+      "bairro": "Maracanã",
+      "telefone": "(21) 2284-6339",
+      "latitude": -22.9136,
+      "longitude": -43.2353
+    },
+    {
+      "cnes": "7118376",
+      "nome": "SMS CAPS AD JULIO CESAR DE CARVALHO AP 53",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "3304557",
+      "endereco": "Rua Severino das Chagas, 196",
+      "bairro": "Santa Cruz",
+      "telefone": "(21) 3156-9277",
+      "latitude": -22.9175,
+      "longitude": -43.6889
+    },
+    {
+      "cnes": "4423844",
+      "nome": "SMS CAPS AD III CAROLINA MARIA DE JESUS AP 10",
+      "modalidade": "CAPS_AD_III",
+      "codigo_ibge": "3304557",
+      "endereco": "Rua Emancipação, 9",
+      "bairro": "São Cristóvão",
+      "telefone": "(21) 96518-0649",
+      "latitude": -22.8975,
+      "longitude": -43.2219
+    },
+    {
+      "cnes": "7561660",
+      "nome": "SMS CAPS AD MIRIAM MAKEBA AP 31",
+      "modalidade": "CAPS_AD_III",
+      "codigo_ibge": "3304557",
+      "endereco": "Rua Professor Lacê, 485",
+      "bairro": "Ramos",
+      "telefone": "(21) 3889-8441",
+      "latitude": -22.8531,
+      "longitude": -43.2561
+    },
+    {
+      "cnes": "5413605",
+      "nome": "SMS CAPS AD RAUL SEIXAS AP 32",
+      "modalidade": "CAPS_AD_III",
+      "codigo_ibge": "3304557",
+      "endereco": "Rua Dois de Fevereiro, 785",
+      "bairro": "Encantado",
+      "telefone": "(21) 3111-7512",
+      "latitude": -22.8969,
+      "longitude": -43.3017
+    },
+    {
+      "cnes": "4424328",
+      "nome": "SMS CAPS AD III DONA IVONE LARA AP 33",
+      "modalidade": "CAPS_AD_III",
+      "codigo_ibge": "3304557",
+      "endereco": "Avenida Ernani Cardoso, 21",
+      "bairro": "Cascadura",
+      "telefone": null,
+      "latitude": -22.8819,
+      "longitude": -43.3283
+    },
+    {
+      "cnes": "7656106",
+      "nome": "SMS CAPS AD III PAULO DA PORTELA AP 33",
+      "modalidade": "CAPS_AD_III",
+      "codigo_ibge": "3304557",
+      "endereco": "Rua Pirapora, 69",
+      "bairro": "Madureira",
+      "telefone": "(21) 2452-2130",
+      "latitude": -22.8711,
+      "longitude": -43.3414
+    },
+    {
+      "cnes": "7080522",
+      "nome": "SMS CAPS AD III ANTONIO CARLOS MUSSUM AP 40",
+      "modalidade": "CAPS_AD_III",
+      "codigo_ibge": "3304557",
+      "endereco": "Rua Sampaio Corrêa, s/nº",
+      "bairro": "Taquara (Jacarepaguá)",
+      "telefone": "(21) 3523-8546",
+      "latitude": -22.9247,
+      "longitude": -43.3772
+    },
+    {
+      "cnes": "4473701",
+      "nome": "SMS CAPS AD III JOVELINA PEROLA NEGRA AP 40",
+      "modalidade": "CAPS_AD_III",
+      "codigo_ibge": "3304557",
+      "endereco": "Estrada Rodrigues Caldas, 3400, fundos",
+      "bairro": "Taquara (Jacarepaguá)",
+      "telefone": null,
+      "latitude": -22.9319,
+      "longitude": -43.3944
+    },
+    {
+      "cnes": "7325401",
+      "nome": "CAPS UERJ UNIVERSITARIO",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "3304557",
+      "endereco": "Avenida Marechal Rondon, 381 (Policlínica Piquet Carneiro)",
+      "bairro": "São Francisco Xavier",
+      "telefone": "(21) 2334-2371",
+      "latitude": -22.9056,
+      "longitude": -43.2411
+    },
+    {
+      "cnes": "2298856",
+      "nome": "CAPS II MARTHA E DR JACINTO",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "3303302",
+      "endereco": "Travessa Nossa Senhora de Fátima, 76",
+      "bairro": "Largo da Batalha",
+      "telefone": "(21) 3613-2189",
+      "latitude": -22.9042,
+      "longitude": -43.0631
+    },
+    {
+      "cnes": "2293269",
+      "nome": "CAPS HERBERT DE SOUZA",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "3303302",
+      "endereco": "Rua Clotilde de Oliveira Rodrigues, 42",
+      "bairro": "Fonseca",
+      "telefone": "(21) 3613-2190",
+      "latitude": -22.8803,
+      "longitude": -43.0847
+    },
+    {
+      "cnes": "3296598",
+      "nome": "CAPS AD III ALCENIR VERAS DA SILVA",
+      "modalidade": "CAPS_AD_III",
+      "codigo_ibge": "3303302",
+      "endereco": "Rua Doutor Fróes da Cruz, 22",
+      "bairro": "Centro",
+      "telefone": "(21) 3613-2188",
+      "latitude": -22.8886,
+      "longitude": -43.1206
+    },
+    {
+      "cnes": "3708330",
+      "nome": "CAPSI ALDA MARIA (MONTEIRO LOBATO)",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "3303302",
+      "endereco": "Avenida Almirante Ary Parreiras, 649",
+      "bairro": "Vital Brazil",
+      "telefone": "(21) 2621-6598",
+      "latitude": -22.9064,
+      "longitude": -43.0958
+    },
+    {
+      "cnes": "2697092",
+      "nome": "CAPS II PAULO MARCOS COSTA",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "3304904",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.8268,
+      "longitude": -43.0634
+    },
+    {
+      "cnes": "7549415",
+      "nome": "CAPS III FRANCISCO DOS SANTOS SIQUEIRA",
+      "modalidade": "CAPS_III",
+      "codigo_ibge": "3304904",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.831,
+      "longitude": -43.055
+    },
+    {
+      "cnes": "6432050",
+      "nome": "CAPS ALCOOL E OUTRAS DROGAS II SAO GONCALO",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "3304904",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.8215,
+      "longitude": -43.048
+    },
+    {
+      "cnes": "9570837",
+      "nome": "CAPS ALCOOL E DROGAS III DR DANIEL GOMES DA SILVA",
+      "modalidade": "CAPS_AD_III",
+      "codigo_ibge": "3304904",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.819,
+      "longitude": -43.039
+    },
+    {
+      "cnes": "5261287",
+      "nome": "CAPS INFANTO JUVENIL ZE GAROTO",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "3304904",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.8285,
+      "longitude": -43.058
+    },
+    {
+      "cnes": "9462252",
+      "nome": "CAPSI INFANTO JUVENIL DR JOAQUIM DOS REIS PEREIRA",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "3304904",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.815,
+      "longitude": -43.025
+    },
+    {
+      "cnes": "2283433",
+      "nome": "CAPS CENTRO DE ATENPSICOSSOCIAL DR LESLIE SCHAVIN",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "3301702",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.7858,
+      "longitude": -43.3049
+    },
+    {
+      "cnes": "8089930",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL CAPS III FIGUEIRA",
+      "modalidade": "CAPS_III",
+      "codigo_ibge": "3301702",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.685,
+      "longitude": -43.285
+    },
+    {
+      "cnes": "7032862",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL IMBARIE",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "3301702",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.641,
+      "longitude": -43.219
+    },
+    {
+      "cnes": "7064357",
+      "nome": "CAPSAD RENATO RUSSO",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "3301702",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.789,
+      "longitude": -43.311
+    },
+    {
+      "cnes": "5558840",
+      "nome": "CAPS AD XEREM",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "3301702",
+      "endereco": null,
+      "bairro": "Xerém",
+      "telefone": null,
+      "latitude": -22.581,
+      "longitude": -43.302
+    },
+    {
+      "cnes": "3394662",
+      "nome": "CENTRO DE AT PSICOSINFANTO JUVENIL DE DCAXIAS CAPSIJ DC",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "3301702",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.782,
+      "longitude": -43.309
+    },
+    {
+      "cnes": "2284111",
+      "nome": "CAPS III JAYR NOGUEIRA",
+      "modalidade": "CAPS_III",
+      "codigo_ibge": "3303500",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.7592,
+      "longitude": -43.4511
+    },
+    {
+      "cnes": "6376835",
+      "nome": "CAPS AD VANDERLEI MARINS",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "3303500",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.755,
+      "longitude": -43.448
+    },
+    {
+      "cnes": "6409792",
+      "nome": "CAPSI DOM ADRIANO HIPOLITO",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "3303500",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.761,
+      "longitude": -43.456
+    },
+    {
+      "cnes": "4750764",
+      "nome": "CAPSI MIGUEL COUTO",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "3303500",
+      "endereco": null,
+      "bairro": "Miguel Couto",
+      "telefone": null,
+      "latitude": -22.705,
+      "longitude": -43.425
+    },
+    {
+      "cnes": "2812711",
+      "nome": "CAPS DR ARI VIANA",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "3301009",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -21.7545,
+      "longitude": -41.3244
+    },
+    {
+      "cnes": "2287560",
+      "nome": "CAPS DR JOAO BATISTA DE ARAUJO GOMES",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "3301009",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -21.761,
+      "longitude": -41.319
+    },
+    {
+      "cnes": "6476775",
+      "nome": "CAPS III DR ROMEO CASARSA",
+      "modalidade": "CAPS_III",
+      "codigo_ibge": "3301009",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -21.75,
+      "longitude": -41.331
+    },
+    {
+      "cnes": "4510747",
+      "nome": "CAPS 3 MAKHOUL MOUSSALEM",
+      "modalidade": "CAPS_III",
+      "codigo_ibge": "3301009",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -21.748,
+      "longitude": -41.315
+    },
+    {
+      "cnes": "5428092",
+      "nome": "CAPSI JOAO CASTELO BRANCO",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "3301009",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -21.758,
+      "longitude": -41.328
+    },
+    {
+      "cnes": "2289644",
+      "nome": "CAPS ADULTO BELFORD ROXO",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "3300456",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.7642,
+      "longitude": -43.3992
+    },
+    {
+      "cnes": "3320979",
+      "nome": "CAPS ALCOOL E DROGAS ZAIRA VICENTE BICCHIERI",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "3300456",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.761,
+      "longitude": -43.395
+    },
+    {
+      "cnes": "3320995",
+      "nome": "CAPS INFANTO JUVENIL DE BELFORD ROXO",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "3300456",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.768,
+      "longitude": -43.402
+    },
+    {
+      "cnes": "2283980",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL CAPS III VILA JURANDYR",
+      "modalidade": "CAPS_III",
+      "codigo_ibge": "3305109",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.8039,
+      "longitude": -43.3722
+    },
+    {
+      "cnes": "6445241",
+      "nome": "CAPS AD SAO JOAO DE MERITI",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "3305109",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.801,
+      "longitude": -43.369
+    },
+    {
+      "cnes": "6257283",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL INFANTO JUVENIL MANINHO CAPSI",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "3305109",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.8065,
+      "longitude": -43.376
+    },
+    {
+      "cnes": "5441757",
+      "nome": "CAPS I SYLVIA ORTHOF",
+      "modalidade": "CAPS_I",
+      "codigo_ibge": "3303906",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.505,
+      "longitude": -43.1789
+    },
+    {
+      "cnes": "5441870",
+      "nome": "CAPS III NISE DA SILVEIRA",
+      "modalidade": "CAPS_III",
+      "codigo_ibge": "3303906",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.511,
+      "longitude": -43.182
+    },
+    {
+      "cnes": "9177558",
+      "nome": "CAPS III NUBIA HELENA DOS SANTOS",
+      "modalidade": "CAPS_III",
+      "codigo_ibge": "3303906",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.498,
+      "longitude": -43.175
+    },
+    {
+      "cnes": "6706258",
+      "nome": "CAPS AD III ALCOOL E OUTRAS DROGAS PETROPOLIS",
+      "modalidade": "CAPS_AD_III",
+      "codigo_ibge": "3303906",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.508,
+      "longitude": -43.171
+    },
+    {
+      "cnes": "6478697",
+      "nome": "CAPS DR SERGIO SIBILIO FRITSCH",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "3306305",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.5202,
+      "longitude": -44.0996
+    },
+    {
+      "cnes": "0024740",
+      "nome": "CAPS USINA DE SONHOS CENTRO DE ATENCAO PSICOSSOCIAL",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "3306305",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.515,
+      "longitude": -44.095
+    },
+    {
+      "cnes": "0025968",
+      "nome": "CAPS VILA ESPERANCA",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "3306305",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.525,
+      "longitude": -44.105
+    },
+    {
+      "cnes": "5076315",
+      "nome": "CAPS AD II LUCIA MARIA BESSADA",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "3306305",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.518,
+      "longitude": -44.108
+    },
+    {
+      "cnes": "0024783",
+      "nome": "CAPS VIVA VIDA CENTRO DE ATENCAO PSICOSSOCIAL INFANTIL",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "3306305",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.523,
+      "longitude": -44.092
+    },
+    {
+      "cnes": "3993043",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL DE MACAE BETINHO",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "3302403",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.3708,
+      "longitude": -41.7869
+    },
+    {
+      "cnes": "5836409",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL CAPS AD PORTO",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "3302403",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.375,
+      "longitude": -41.781
+    },
+    {
+      "cnes": "6608965",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL INFANTOJUVENIL CAPSI OF VIDA",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "3302403",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.368,
+      "longitude": -41.791
+    },
+    {
+      "cnes": "2697386",
+      "nome": "CAPS CENTRO DE ATENCAO PSICOSSOCIAL LIDIA MENEZES",
+      "modalidade": "CAPS_I",
+      "codigo_ibge": "3302502",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.6528,
+      "longitude": -43.0406
+    },
+    {
+      "cnes": "9286195",
+      "nome": "CAPS III DE PIABETA",
+      "modalidade": "CAPS_III",
+      "codigo_ibge": "3302502",
+      "endereco": null,
+      "bairro": "Piabetá",
+      "telefone": null,
+      "latitude": -22.615,
+      "longitude": -43.175
+    },
+    {
+      "cnes": "3361691",
+      "nome": "CAPS AD CENTRO DE ATENCAO PSICOSSOCIAL ALCOOL E DROGAS MAGE",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "3302502",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.656,
+      "longitude": -43.038
+    },
+    {
+      "cnes": "5434661",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL CAPS AD III MAUA",
+      "modalidade": "CAPS_AD_III",
+      "codigo_ibge": "3302502",
+      "endereco": null,
+      "bairro": "Guia de Pacobaíba",
+      "telefone": null,
+      "latitude": -22.701,
+      "longitude": -43.152
+    },
+    {
+      "cnes": "7131666",
+      "nome": "CAPSI LUCINA SOARES BEVENUTE",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "3302502",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.649,
+      "longitude": -43.044
+    },
+    {
+      "cnes": "9826459",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL CELESTE MARIA CAMPOS",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "3301900",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.7444,
+      "longitude": -42.8594
+    },
+    {
+      "cnes": "2693887",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL ILMA DAS FLORES",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "3301900",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.748,
+      "longitude": -42.854
+    },
+    {
+      "cnes": "9826467",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL LIMA BARRETO",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "3301900",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.741,
+      "longitude": -42.863
+    },
+    {
+      "cnes": "5722373",
+      "nome": "CAPS INFANTO JUVENIL MARINEA BARRETO",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "3301900",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.746,
+      "longitude": -42.851
+    },
+    {
+      "cnes": "5923182",
+      "nome": "CAPS DR LEONARDO JORGE DOS SANTOS MACHADO",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "3300704",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.8789,
+      "longitude": -42.0186
+    },
+    {
+      "cnes": "7075901",
+      "nome": "CAPS AD EDUARDO GUIMARAES ROCHA",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "3300704",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.882,
+      "longitude": -42.023
+    },
+    {
+      "cnes": "9379657",
+      "nome": "CAPSI CATA VENTO",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "3300704",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.875,
+      "longitude": -42.015
+    },
+    {
+      "cnes": "7321716",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL GILBERTO SILVA DOS SANTOS",
+      "modalidade": "CAPS_III",
+      "codigo_ibge": "3302700",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.9194,
+      "longitude": -42.8186
+    },
+    {
+      "cnes": "9118268",
+      "nome": "CAPSAD GLAUCIA PEREIRA DE OLIVEIRA",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "3302700",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.922,
+      "longitude": -42.822
+    },
+    {
+      "cnes": "9445900",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL INFANTO JUVENIL DE MARICA",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "3302700",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.916,
+      "longitude": -42.815
+    },
+    {
+      "cnes": "3181421",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL III QUATRO ESTACOES",
+      "modalidade": "CAPS_III",
+      "codigo_ibge": "3303401",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.2819,
+      "longitude": -42.5311
+    },
+    {
+      "cnes": "9218734",
+      "nome": "CAPS AD NOVA FRIBURGO",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "3303401",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.285,
+      "longitude": -42.534
+    },
+    {
+      "cnes": "9491309",
+      "nome": "CAPSI BRASILEIRINHOS",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "3303401",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.279,
+      "longitude": -42.529
+    },
+    {
+      "cnes": "2279819",
+      "nome": "CAPSII ESTACAO MENTAL",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "3300407",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.5442,
+      "longitude": -44.1714
+    },
+    {
+      "cnes": "5365376",
+      "nome": "CAPS AD II ESPACO REVIVER",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "3300407",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.541,
+      "longitude": -44.168
+    },
+    {
+      "cnes": "2804654",
+      "nome": "CAPSI ESTACAO VIVER",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "3300407",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.547,
+      "longitude": -44.175
+    },
+    {
+      "cnes": "6492606",
+      "nome": "CENTRO DE ATENCAO PSICOS A DEP DE ALCOOL E DROGAS CAPSAD",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "3300100",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -23.0067,
+      "longitude": -44.3181
+    },
+    {
+      "cnes": "6454135",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL INFANTIL CAPSI",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "3300100",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -23.003,
+      "longitude": -44.315
+    },
+    {
+      "cnes": "5026245",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL CAPS III CASA AZUL",
+      "modalidade": "CAPS_III",
+      "codigo_ibge": "3302858",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.7825,
+      "longitude": -43.4317
+    },
+    {
+      "cnes": "6668399",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL ALCOOL E DROGAS MESQUITA",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "3302858",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.785,
+      "longitude": -43.429
+    },
+    {
+      "cnes": "9881565",
+      "nome": "CAPSI MESQUITA",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "3302858",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.78,
+      "longitude": -43.434
+    },
+    {
+      "cnes": "6687814",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL CAPS II TERESOPOLIS",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "3305802",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.4122,
+      "longitude": -42.9664
+    },
+    {
+      "cnes": "6687822",
+      "nome": "CENTRO DE ATENCAO PSICOSSOCIAL INFANTO JUVENIL CAPSI TERESOPOLIS",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "3305802",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.415,
+      "longitude": -42.963
+    },
+    {
+      "cnes": "3267490",
+      "nome": "CAPS II ESPACO VIVO DONA IVONE LARA",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "3303203",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.8083,
+      "longitude": -43.4147
+    },
+    {
+      "cnes": "7326106",
+      "nome": "CAPS AD II NOVOS TEMPOS",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "3303203",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.811,
+      "longitude": -43.418
+    },
+    {
+      "cnes": "2273152",
+      "nome": "CAPS NUCLEO DE ATENCAO CASA ABERTA",
+      "modalidade": "CAPS_II",
+      "codigo_ibge": "3304201",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.4689,
+      "longitude": -44.4467
+    },
+    {
+      "cnes": "2288834",
+      "nome": "CAPS AD RESENDE",
+      "modalidade": "CAPS_AD",
+      "codigo_ibge": "3304201",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.465,
+      "longitude": -44.443
+    },
+    {
+      "cnes": "2288621",
+      "nome": "CAPSI CENTRO DE ATENCAO PSICOSSOCIAL INFANTO JUVENIL RESENDE",
+      "modalidade": "CAPSI",
+      "codigo_ibge": "3304201",
+      "endereco": null,
+      "bairro": null,
+      "telefone": null,
+      "latitude": -22.471,
+      "longitude": -44.45
+    }
+  ],
+  "serie_uf": [
+    {
+      "codigo_uf": 22,
+      "periodo": "2025-12",
+      "qtd_caps": 16
+    },
+    {
+      "codigo_uf": 22,
+      "periodo": "2026-01",
+      "qtd_caps": 16
+    },
+    {
+      "codigo_uf": 22,
+      "periodo": "2026-02",
+      "qtd_caps": 16
+    },
+    {
+      "codigo_uf": 22,
+      "periodo": "2026-03",
+      "qtd_caps": 16
+    },
+    {
+      "codigo_uf": 22,
+      "periodo": "2026-04",
+      "qtd_caps": 16
+    },
+    {
+      "codigo_uf": 22,
+      "periodo": "2026-05",
+      "qtd_caps": 16
+    },
+    {
+      "codigo_uf": 22,
+      "periodo": "2026-06",
+      "qtd_caps": 16
+    },
+    {
+      "codigo_uf": 22,
+      "periodo": "2026-07",
+      "qtd_caps": 16
+    },
+    {
+      "codigo_uf": 22,
+      "periodo": "2026-08",
+      "qtd_caps": 16
+    },
+    {
+      "codigo_uf": 22,
+      "periodo": "2026-09",
+      "qtd_caps": 16
+    },
+    {
+      "codigo_uf": 22,
+      "periodo": "2026-10",
+      "qtd_caps": 16
+    },
+    {
+      "codigo_uf": 22,
+      "periodo": "2026-11",
+      "qtd_caps": 16
+    },
+    {
+      "codigo_uf": 31,
+      "periodo": "2025-12",
+      "qtd_caps": 16
+    },
+    {
+      "codigo_uf": 31,
+      "periodo": "2026-01",
+      "qtd_caps": 16
+    },
+    {
+      "codigo_uf": 31,
+      "periodo": "2026-02",
+      "qtd_caps": 16
+    },
+    {
+      "codigo_uf": 31,
+      "periodo": "2026-03",
+      "qtd_caps": 16
+    },
+    {
+      "codigo_uf": 31,
+      "periodo": "2026-04",
+      "qtd_caps": 16
+    },
+    {
+      "codigo_uf": 31,
+      "periodo": "2026-05",
+      "qtd_caps": 16
+    },
+    {
+      "codigo_uf": 31,
+      "periodo": "2026-06",
+      "qtd_caps": 16
+    },
+    {
+      "codigo_uf": 31,
+      "periodo": "2026-07",
+      "qtd_caps": 16
+    },
+    {
+      "codigo_uf": 31,
+      "periodo": "2026-08",
+      "qtd_caps": 16
+    },
+    {
+      "codigo_uf": 31,
+      "periodo": "2026-09",
+      "qtd_caps": 16
+    },
+    {
+      "codigo_uf": 31,
+      "periodo": "2026-10",
+      "qtd_caps": 16
+    },
+    {
+      "codigo_uf": 31,
+      "periodo": "2026-11",
+      "qtd_caps": 16
+    },
+    {
+      "codigo_uf": 32,
+      "periodo": "2025-12",
+      "qtd_caps": 22
+    },
+    {
+      "codigo_uf": 32,
+      "periodo": "2026-01",
+      "qtd_caps": 22
+    },
+    {
+      "codigo_uf": 32,
+      "periodo": "2026-02",
+      "qtd_caps": 22
+    },
+    {
+      "codigo_uf": 32,
+      "periodo": "2026-03",
+      "qtd_caps": 22
+    },
+    {
+      "codigo_uf": 32,
+      "periodo": "2026-04",
+      "qtd_caps": 22
+    },
+    {
+      "codigo_uf": 32,
+      "periodo": "2026-05",
+      "qtd_caps": 22
+    },
+    {
+      "codigo_uf": 32,
+      "periodo": "2026-06",
+      "qtd_caps": 22
+    },
+    {
+      "codigo_uf": 32,
+      "periodo": "2026-07",
+      "qtd_caps": 22
+    },
+    {
+      "codigo_uf": 32,
+      "periodo": "2026-08",
+      "qtd_caps": 22
+    },
+    {
+      "codigo_uf": 32,
+      "periodo": "2026-09",
+      "qtd_caps": 22
+    },
+    {
+      "codigo_uf": 32,
+      "periodo": "2026-10",
+      "qtd_caps": 22
+    },
+    {
+      "codigo_uf": 32,
+      "periodo": "2026-11",
+      "qtd_caps": 22
+    },
+    {
+      "codigo_uf": 41,
+      "periodo": "2025-12",
+      "qtd_caps": 3
+    },
+    {
+      "codigo_uf": 41,
+      "periodo": "2026-01",
+      "qtd_caps": 3
+    },
+    {
+      "codigo_uf": 41,
+      "periodo": "2026-02",
+      "qtd_caps": 3
+    },
+    {
+      "codigo_uf": 41,
+      "periodo": "2026-03",
+      "qtd_caps": 3
+    },
+    {
+      "codigo_uf": 41,
+      "periodo": "2026-04",
+      "qtd_caps": 3
+    },
+    {
+      "codigo_uf": 41,
+      "periodo": "2026-05",
+      "qtd_caps": 3
+    },
+    {
+      "codigo_uf": 41,
+      "periodo": "2026-06",
+      "qtd_caps": 3
+    },
+    {
+      "codigo_uf": 41,
+      "periodo": "2026-07",
+      "qtd_caps": 3
+    },
+    {
+      "codigo_uf": 41,
+      "periodo": "2026-08",
+      "qtd_caps": 3
+    },
+    {
+      "codigo_uf": 41,
+      "periodo": "2026-09",
+      "qtd_caps": 3
+    },
+    {
+      "codigo_uf": 41,
+      "periodo": "2026-10",
+      "qtd_caps": 3
+    },
+    {
+      "codigo_uf": 41,
+      "periodo": "2026-11",
+      "qtd_caps": 3
+    },
+    {
+      "codigo_uf": 43,
+      "periodo": "2025-12",
+      "qtd_caps": 77
+    },
+    {
+      "codigo_uf": 43,
+      "periodo": "2026-01",
+      "qtd_caps": 78
+    },
+    {
+      "codigo_uf": 43,
+      "periodo": "2026-02",
+      "qtd_caps": 78
+    },
+    {
+      "codigo_uf": 43,
+      "periodo": "2026-03",
+      "qtd_caps": 78
+    },
+    {
+      "codigo_uf": 43,
+      "periodo": "2026-04",
+      "qtd_caps": 78
+    },
+    {
+      "codigo_uf": 43,
+      "periodo": "2026-05",
+      "qtd_caps": 78
+    },
+    {
+      "codigo_uf": 43,
+      "periodo": "2026-06",
+      "qtd_caps": 78
+    },
+    {
+      "codigo_uf": 43,
+      "periodo": "2026-07",
+      "qtd_caps": 78
+    },
+    {
+      "codigo_uf": 43,
+      "periodo": "2026-08",
+      "qtd_caps": 78
+    },
+    {
+      "codigo_uf": 43,
+      "periodo": "2026-09",
+      "qtd_caps": 78
+    },
+    {
+      "codigo_uf": 43,
+      "periodo": "2026-10",
+      "qtd_caps": 78
+    },
+    {
+      "codigo_uf": 43,
+      "periodo": "2026-11",
+      "qtd_caps": 78
+    },
+    {
+      "codigo_uf": 50,
+      "periodo": "2025-12",
+      "qtd_caps": 18
+    },
+    {
+      "codigo_uf": 50,
+      "periodo": "2026-01",
+      "qtd_caps": 18
+    },
+    {
+      "codigo_uf": 50,
+      "periodo": "2026-02",
+      "qtd_caps": 18
+    },
+    {
+      "codigo_uf": 50,
+      "periodo": "2026-03",
+      "qtd_caps": 18
+    },
+    {
+      "codigo_uf": 50,
+      "periodo": "2026-04",
+      "qtd_caps": 18
+    },
+    {
+      "codigo_uf": 50,
+      "periodo": "2026-05",
+      "qtd_caps": 18
+    },
+    {
+      "codigo_uf": 50,
+      "periodo": "2026-06",
+      "qtd_caps": 18
+    },
+    {
+      "codigo_uf": 50,
+      "periodo": "2026-07",
+      "qtd_caps": 18
+    },
+    {
+      "codigo_uf": 50,
+      "periodo": "2026-08",
+      "qtd_caps": 18
+    },
+    {
+      "codigo_uf": 50,
+      "periodo": "2026-09",
+      "qtd_caps": 18
+    },
+    {
+      "codigo_uf": 50,
+      "periodo": "2026-10",
+      "qtd_caps": 18
+    },
+    {
+      "codigo_uf": 50,
+      "periodo": "2026-11",
+      "qtd_caps": 18
+    },
+    {
+      "codigo_uf": 51,
+      "periodo": "2025-12",
+      "qtd_caps": 14
+    },
+    {
+      "codigo_uf": 51,
+      "periodo": "2026-01",
+      "qtd_caps": 14
+    },
+    {
+      "codigo_uf": 51,
+      "periodo": "2026-02",
+      "qtd_caps": 14
+    },
+    {
+      "codigo_uf": 51,
+      "periodo": "2026-03",
+      "qtd_caps": 14
+    },
+    {
+      "codigo_uf": 51,
+      "periodo": "2026-04",
+      "qtd_caps": 14
+    },
+    {
+      "codigo_uf": 51,
+      "periodo": "2026-05",
+      "qtd_caps": 14
+    },
+    {
+      "codigo_uf": 51,
+      "periodo": "2026-06",
+      "qtd_caps": 14
+    },
+    {
+      "codigo_uf": 51,
+      "periodo": "2026-07",
+      "qtd_caps": 14
+    },
+    {
+      "codigo_uf": 51,
+      "periodo": "2026-08",
+      "qtd_caps": 14
+    },
+    {
+      "codigo_uf": 51,
+      "periodo": "2026-09",
+      "qtd_caps": 14
+    },
+    {
+      "codigo_uf": 51,
+      "periodo": "2026-10",
+      "qtd_caps": 14
+    },
+    {
+      "codigo_uf": 51,
+      "periodo": "2026-11",
+      "qtd_caps": 14
+    },
+    {
+      "codigo_uf": 53,
+      "periodo": "2025-12",
+      "qtd_caps": 19
+    },
+    {
+      "codigo_uf": 53,
+      "periodo": "2026-01",
+      "qtd_caps": 19
+    },
+    {
+      "codigo_uf": 53,
+      "periodo": "2026-02",
+      "qtd_caps": 19
+    },
+    {
+      "codigo_uf": 53,
+      "periodo": "2026-03",
+      "qtd_caps": 19
+    },
+    {
+      "codigo_uf": 53,
+      "periodo": "2026-04",
+      "qtd_caps": 19
+    },
+    {
+      "codigo_uf": 53,
+      "periodo": "2026-05",
+      "qtd_caps": 19
+    },
+    {
+      "codigo_uf": 53,
+      "periodo": "2026-06",
+      "qtd_caps": 19
+    },
+    {
+      "codigo_uf": 53,
+      "periodo": "2026-07",
+      "qtd_caps": 19
+    },
+    {
+      "codigo_uf": 53,
+      "periodo": "2026-08",
+      "qtd_caps": 19
+    },
+    {
+      "codigo_uf": 53,
+      "periodo": "2026-09",
+      "qtd_caps": 19
+    },
+    {
+      "codigo_uf": 53,
+      "periodo": "2026-10",
+      "qtd_caps": 19
+    },
+    {
+      "codigo_uf": 53,
+      "periodo": "2026-11",
+      "qtd_caps": 19
+    },
+    {
+      "codigo_uf": 33,
+      "periodo": "2025-12",
+      "qtd_caps": 116
+    },
+    {
+      "codigo_uf": 33,
+      "periodo": "2026-01",
+      "qtd_caps": 116
+    },
+    {
+      "codigo_uf": 33,
+      "periodo": "2026-02",
+      "qtd_caps": 116
+    },
+    {
+      "codigo_uf": 33,
+      "periodo": "2026-03",
+      "qtd_caps": 116
+    },
+    {
+      "codigo_uf": 33,
+      "periodo": "2026-04",
+      "qtd_caps": 116
+    },
+    {
+      "codigo_uf": 33,
+      "periodo": "2026-05",
+      "qtd_caps": 116
+    },
+    {
+      "codigo_uf": 33,
+      "periodo": "2026-06",
+      "qtd_caps": 116
+    },
+    {
+      "codigo_uf": 33,
+      "periodo": "2026-07",
+      "qtd_caps": 116
+    },
+    {
+      "codigo_uf": 33,
+      "periodo": "2026-08",
+      "qtd_caps": 116
+    },
+    {
+      "codigo_uf": 33,
+      "periodo": "2026-09",
+      "qtd_caps": 116
+    },
+    {
+      "codigo_uf": 33,
+      "periodo": "2026-10",
+      "qtd_caps": 116
+    },
+    {
+      "codigo_uf": 33,
+      "periodo": "2026-11",
+      "qtd_caps": 116
+    }
+  ]
+}
