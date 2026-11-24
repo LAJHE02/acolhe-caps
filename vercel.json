@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "functions": {
+    "api/[rota].js": {
+      "includeFiles": "data/amostras/amostra_real_cnes_ibge.json"
+    }
+  },
+  "rewrites": [
+    { "source": "/(buscar|servicos|cobertura|sobre)", "destination": "/index.html" }
+  ]
+}
