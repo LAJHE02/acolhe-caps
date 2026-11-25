@@ -56,6 +56,7 @@ export function paginaBuscar(d) {
     h('option', { value: '' }, 'Escolha o estado'),
     ufsComMunicipio.map((u) => h('option', { value: u.sigla }, `${u.sigla} – ${u.nome}`)));
   const selMun = h('select', { id: 'municipio', disabled: true }, h('option', { value: '' }, 'Escolha primeiro o estado'));
+  const selBairro = h('select', { id: 'bairro', disabled: true }, h('option', { value: '' }, 'Todos os bairros do município'));
   const resultado = h('div', { id: 'resultado', 'aria-live': 'polite' });
   const mapaEl = h('div', { class: 'mapa', hidden: true });
 
@@ -64,24 +65,41 @@ export function paginaBuscar(d) {
     selMun.replaceChildren(h('option', { value: '' }, lista.length ? 'Escolha o município' : 'Escolha primeiro o estado'),
       ...lista.map((m) => h('option', { value: m.codigo_ibge }, m.nome)));
     selMun.disabled = lista.length === 0;
+    selBairro.replaceChildren(h('option', { value: '' }, 'Todos os bairros do município'));
+    selBairro.disabled = true;
     resultado.replaceChildren();
     mapaEl.hidden = true;
   });
-  selMun.addEventListener('change', () => mostrar(selMun.value));
 
-  function mostrar(codigo) {
+  selMun.addEventListener('change', () => {
+    const codigo = selMun.value;
+    const bairros = [...new Set(d.caps.filter((c) => c.codigo_ibge === codigo && c.bairro).map((c) => c.bairro))]
+      .sort((a, b) => a.localeCompare(b, 'pt-BR'));
+    selBairro.replaceChildren(
+      h('option', { value: '' }, bairros.length ? `Todos os bairros (${bairros.length} com CAPS)` : 'Todos os bairros do município'),
+      ...bairros.map((b) => h('option', { value: b }, b)),
+    );
+    selBairro.disabled = bairros.length === 0;
+    mostrar(codigo, '');
+  });
+
+  selBairro.addEventListener('change', () => mostrar(selMun.value, selBairro.value));
+
+  function mostrar(codigo, bairroFiltro = '') {
     resultado.replaceChildren();
     mapaEl.hidden = true;
     const mun = d.municipios.find((m) => m.codigo_ibge === codigo);
     if (!mun) return;
-    const caps = d.caps.filter((c) => c.codigo_ibge === codigo);
-    const titulo = h('h2', { tabindex: '-1' }, `Serviços em ${mun.nome}/${mun.uf}`);
+    const todosCapsMun = d.caps.filter((c) => c.codigo_ibge === codigo);
+    const caps = bairroFiltro ? todosCapsMun.filter((c) => c.bairro === bairroFiltro) : todosCapsMun;
+    const sufixoBairro = bairroFiltro ? ` – bairro ${bairroFiltro}` : '';
+    const titulo = h('h2', { tabindex: '-1' }, `Serviços em ${mun.nome}/${mun.uf}${sufixoBairro}`);
     if (caps.length) {
       resultado.append(titulo, h('p', {}, `${caps.length} ${caps.length === 1 ? 'serviço encontrado' : 'serviços encontrados'}. A mesma informação está no mapa e na lista.`),
         h('ol', { class: 'lista' }, caps.map((c, i) => cartaoCaps(d, c, i + 1, null))));
       mapaEl.hidden = false;
       desenharMapa(mapaEl, caps.map((c, i) => ({ lat: c.latitude, lon: c.longitude, rotulo: i + 1, texto: `${i + 1}. ${c.nome}`, descricao: popup(c, d) })),
-        `Mapa com ${caps.length} serviços em ${mun.nome}. A lista acima traz as mesmas informações em texto.`);
+        `Mapa com ${caps.length} serviços em ${mun.nome}${sufixoBairro}. A lista acima traz as mesmas informações em texto.`);
     } else {
       resultado.append(titulo, telaVazia(`Não encontramos CAPS cadastrado em ${mun.nome}. Isso é comum em cidades pequenas, que usam serviços de cidades da região. Procure a UBS do seu bairro ou a Secretaria Municipal de Saúde para ser orientado.`));
       if (mun.latitude !== null && mun.longitude !== null) {
@@ -102,11 +120,12 @@ export function paginaBuscar(d) {
   }
 
   return h('div', {},
-    h('h1', {}, 'Buscar serviço por município'),
-    h('p', {}, 'Escolha o estado e o município. A escolha fica só no seu aparelho e não é enviada nem guardada.'),
+    h('h1', {}, 'Buscar serviço por município ou bairro'),
+    h('p', {}, 'Escolha o estado, o município e, se quiser, filtre por bairro. A escolha fica só no seu aparelho e não é enviada nem guardada.'),
     h('p', { id: 'dica-busca', class: 'dica' }, 'Não há campo para digitar: você escolhe nas listas.'),
     h('label', { for: 'uf' }, 'Estado'), selUf,
     h('label', { for: 'municipio' }, 'Município'), selMun,
+    h('label', { for: 'bairro' }, 'Bairro (opcional)'), selBairro,
     resultado, mapaEl,
     linhaFonte(d.meta));
 }
@@ -227,7 +246,7 @@ export function paginaSobre(d) {
     h('h1', {}, 'Sobre os dados'),
     h('h2', {}, 'De onde vêm as informações'),
     h('ul', {},
-      h('li', {}, 'Serviços CAPS: Cadastro Nacional de Estabelecimentos de Saúde (CNES/DATASUS), Ministério da Saúde — Tipo de Estabelecimento 70 (CENTRO DE ATENÇÃO PSICOSSOCIAL) e Subtipos 70.01 (CAPS I), 70.02 (CAPS II), 70.03 (CAPS III), 70.04 (CAPS i), 70.05 (CAPS AD), 70.06 e 70.07 (CAPS AD III Municipal e Regional) — dados abertos (nível C), complementados com cartas de serviços oficiais das Secretarias de Saúde (SES-DF, PBH-MG, SMS-POA, SESA-ES).'),
+      h('li', {}, 'Serviços CAPS: Cadastro Nacional de Estabelecimentos de Saúde (CNES/DATASUS), Ministério da Saúde — Tipo de Estabelecimento 70 (CENTRO DE ATENÇÃO PSICOSSOCIAL) e Subtipos 70.01 (CAPS I), 70.02 (CAPS II), 70.03 (CAPS III), 70.04 (CAPS i), 70.05 (CAPS AD), 70.06 e 70.07 (CAPS AD III Municipal e Regional) — dados abertos (nível C), complementados com cartas de serviços oficiais das Secretarias de Saúde (SMS-Rio, FeSaúde Niterói, SES-DF, PBH-MG, SMS-POA, SESA-ES).'),
       h('li', {}, 'Municípios e população residente: IBGE, Censo Demográfico 2022 — Tabela SIDRA 4714 (nível A: API REST aberta, sem cadastro).'),
       h('li', {}, 'Explicações dos serviços e parâmetro de cobertura (0,70 CAPS por 100 mil habitantes): Ministério da Saúde (gov.br/saude/pt-br/composicao/saes/desmad/raps/caps), Saúde Mental em Dados 12 e Portaria GM/MS nº 3.088/2011 (Portaria de Consolidação GM/MS nº 3/2017, Anexo V, Título I, Art. 7º).')),
     r ? h('p', {}, `Última carga de dados reais: ${fmtData(r.coletado_em)} (${r.modo === 'offline' ? 'modo offline / Plano B, a partir de amostra real verificada' : 'direto da fonte online'}).`)
@@ -235,7 +254,7 @@ export function paginaSobre(d) {
     h('h2', {}, 'Limitações conhecidas'),
     h('ul', {},
       h('li', {}, 'O cadastro do CNES é atualizado pelos gestores locais e pode ter endereço, telefone ou localização desatualizados. Sempre que possível, confirme por telefone antes de se deslocar.'),
-      h('li', {}, 'Na amostra offline do CnesWeb (Plano B), os estabelecimentos de Brasília (DF), Belo Horizonte (MG) e Porto Alegre (RS) trazem endereço completo e telefone cruzados com as cartas de serviço oficiais; nos demais municípios da listagem resumida do CnesWeb, endereço e telefone ficam sinalizados como “não informado” para nunca inventar dados.'),
+      h('li', {}, 'Na amostra offline do CnesWeb (Plano B), os estabelecimentos do Rio de Janeiro (RJ), Niterói (RJ), Brasília (DF), Belo Horizonte (MG) e Porto Alegre (RS) trazem endereço completo e telefone cruzados com as cartas de serviço oficiais; nos demais municípios da listagem resumida do CnesWeb, endereço e telefone ficam sinalizados como “não informado” para nunca inventar dados.'),
       h('li', {}, 'A localização geográfica no modo offline usa coordenadas aproximadas do bairro ou do centro do município; as distâncias são calculadas em linha reta (fórmula de Haversine).'),
       h('li', {}, 'Municípios com menos de 15 mil habitantes costumam compartilhar CAPS por pactuação regional de saúde; por isso, ter 0 CAPS próprio não significa ausência de atendimento na região.'),
       h('li', {}, 'Quando há conexão à internet, o mapa carrega o Leaflet (unpkg.com) e blocos do OpenStreetMap; quando offline, o sistema desenha automaticamente um mapa esquemático interativo em SVG no próprio navegador.')),

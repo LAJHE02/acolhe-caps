@@ -74,11 +74,11 @@ python3 scripts/seed_teste.py --limpar   # apaga apenas as linhas com is_teste =
 ```
 
 Quando há dados fictícios (`is_teste = 1`) no banco, todas as telas exibem o aviso obrigatório **"Dados de teste, não são reais."**
-Volume gerado pelo seed de teste:
-- `municipios`: **36 linhas** fictícias em 8 UFs (incluindo casos de borda: 0 CAPS, população 0, população nula, metrópole de 2,4 milhões de hab. com 2 CAPS e município sem coordenadas);
-- `caps`: **94 linhas** fictícias (incluindo serviço sem telefone e serviço sem endereço/coordenadas);
-- `serie_uf`: **95 linhas** (12 períodos mensais × 8 UFs, incluindo UF com mês sem dados e UF com valor zero inicial);
-- `cargas`: **1 linha** (`modo = 'teste'`).
+Volume e regras usadas para inventar cada valor no seed de teste (`is_teste = 1`):
+- `municipios` (**36 linhas** em 8 UFs): códigos iniciados por `99` (`9900001` a `9900036`) para jamais colidir com códigos IBGE reais; nomes fictícios plausíveis (*Vila Esperança (Teste)*, *Porto Sereno (Teste)*, etc.); populações entre `0` e `2.400.000` cobrindo todos os casos de borda (município com `0 CAPS`, população `0`, população `NULL`, metrópole de `2,4 milhões` com apenas `2 CAPS` e município sem coordenadas `latitude/longitude = NULL`).
+- `caps` (**94 linhas**): códigos CNES iniciados por `T` (`T000001` a `T000094`); distribuídos entre as 6 modalidades (`CAPS_I`, `CAPS_II`, `CAPS_III`, `CAPSI`, `CAPS_AD`, `CAPS_AD_III`); endereços e bairros fictícios (*Rua das Acácias (fictício)*) e telefones no padrão reservado `(00) 0000-xxxx` (nunca números reais), incluindo casos de borda com `telefone = NULL` e `endereco/latitude/longitude = NULL`.
+- `serie_uf` (**95 linhas**): 12 períodos mensais (`2025-04` a `2026-03`) × 8 UFs, com crescimento gradual determinístico, incluindo caso de borda de período sem dados (lacuna no mês `2025-09` da UF `31`, que interrompe a linha do gráfico) e UF iniciando com `0 CAPS`.
+- `cargas` (**1 linha**): registro de auditoria com `modo = 'teste'` e `is_teste = 1`.
 
 ### Atualizar diretamente das APIs online (quando houver conexão com DEMAS e IBGE)
 
@@ -106,9 +106,42 @@ Detalhes completos e exemplos de resposta: [docs/FONTES.md](docs/FONTES.md).
 | Fonte | Nível | URL / Endpoint | Uso no sistema |
 |---|---|---|---|
 | **CNES / DATASUS** (CnesWeb, Portal de Dados Abertos do SUS e API DEMAS) | **C** | `http://cnes2.datasus.gov.br/Mod_Ind_Unidade_Listar.asp?VTipo=70`<br>`https://apidadosabertos.saude.gov.br/cnes/estabelecimentos?codigo_tipo_unidade=70&limit=20&offset=0`<br>`https://s3.sa-east-1.amazonaws.com/ckan.saude.gov.br/CNES/cnes_estabelecimentos_json.zip` | Cadastro dos estabelecimentos Tipo `70` (`CENTRO DE ATENÇÃO PSICOSSOCIAL`) e subtipos `70.01` a `70.07` |
-| **Secretarias de Saúde** (SES-DF, PBH-MG, SMS-POA, SESA-ES) | **C** | `https://www.saude.df.gov.br/carta-caps`<br>`https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/saude-mental/servicos-de-referencia-em-saude-mental`<br>`https://prefeitura.poa.br/carta-de-servicos/saude-mental`<br>`https://saude.es.gov.br/media/Planejamento/ficha_de_qualificacao/1.5.1-1.pdf` | Endereço, bairro e telefone público dos CAPS na amostra real verificada |
+| **Secretarias de Saúde** (SMS-Rio/Defensoria-RJ, FeSaúde Niterói, SES-DF, PBH-MG, SMS-POA, SESA-ES) | **C** | `https://www.1746.rio/hc/pt-br/articles/10729603431963`<br>`https://saude.niteroi.rj.gov.br/rede-de-atencao-psicossocial/`<br>`https://www.saude.df.gov.br/carta-caps`<br>`https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/saude-mental/servicos-de-referencia-em-saude-mental`<br>`https://prefeitura.poa.br/carta-de-servicos/saude-mental`<br>`https://saude.es.gov.br/media/Planejamento/ficha_de_qualificacao/1.5.1-1.pdf` | Endereço, bairro e telefone público dos CAPS na amostra real verificada |
 | **IBGE – Censo Demográfico 2022 e Localidades** | **A** | `https://servicodados.ibge.gov.br/api/v1/localidades/estados`<br>`https://servicodados.ibge.gov.br/api/v3/agregados/4714/periodos/2022/variaveis/93?localidades=N6[all]` | Estados, municípios (código IBGE de 7 dígitos) e população residente (Censo 2022) |
 | **Ministério da Saúde – RAPS** | **A** | `https://www.gov.br/saude/pt-br/composicao/saes/desmad/raps/caps`<br>Portaria GM/MS nº 3.088/2011 e Portaria de Consolidação GM/MS nº 3/2017 | Explicações das modalidades e parâmetro de cobertura por 100 mil habitantes |
+
+### Exemplo real de resposta (amostra salva em `data/amostra.json` e `data/amostras/amostra_real_cnes_ibge.json`)
+
+```json
+{
+  "coletado_em": "2026-11-24T16:25:00Z",
+  "municipios": [
+    {
+      "codigo_ibge": "3304557",
+      "nome": "Rio de Janeiro",
+      "uf": "RJ",
+      "codigo_uf": 33,
+      "populacao": 6211223,
+      "populacao_ano": 2022,
+      "latitude": -22.9068,
+      "longitude": -43.1729
+    }
+  ],
+  "caps": [
+    {
+      "cnes": "7884524",
+      "nome": "SMS CAPS FRANCO BASAGLIA AP 21",
+      "modalidade": "CAPS_III",
+      "codigo_ibge": "3304557",
+      "endereco": "Avenida Venceslau Brás, 65, fundos",
+      "bairro": "Botafogo",
+      "telefone": "(21) 2542-6761",
+      "latitude": -22.9525,
+      "longitude": -43.1764
+    }
+  ]
+}
+```
 
 ### Códigos CNES confirmados (Tabela de Tipos e Subtipos de Estabelecimento SCNES)
 
@@ -129,9 +162,12 @@ Conforme *Saúde Mental em Dados 12* (Ministério da Saúde) e a *Portaria de Co
 
 ---
 
-## 4. Esquema do banco de dados
+## 4. Esquema do banco de dados e decisões de arquitetura
 
-Para desenvolvimento local usamos **SQLite** ([db/schema.sql](db/schema.sql), arquivo `data/acolhe.db`). Para publicação em ambiente com disco efêmero (como Google Cloud Run), entregamos também o esquema equivalente em **PostgreSQL** ([db/schema_postgres.sql](db/schema_postgres.sql), compatível com Cloud SQL, Neon ou Supabase) e auto-inicialização da amostra real na subida do servidor.
+### Decisões de arquitetura (Banco Relacional + `data/caps.json`)
+- **Cumprimento simultâneo das Regras Gerais e do Prompt do Tema 11:** o enunciado individual do Tema 11 menciona gerar `data/caps.json`, enquanto as **Regras Gerais e o Bloco Comum da atividade** determinam que *"Todo sistema deve ter um banco de dados real, com no mínimo 3 tabelas relacionadas (chaves primária e estrangeira) e consultas feitas pelo servidor"*. Por isso, o script [scripts/carga_real.py](scripts/carga_real.py) faz **ambas as entregas**: gera os arquivos JSON locais ([data/caps.json](data/caps.json), [data/amostra.json](data/amostra.json) e [data/amostras/amostra_real_cnes_ibge.json](data/amostras/amostra_real_cnes_ibge.json)) **e** grava os dados normalizados no banco de dados relacional.
+- **Qual banco escolhemos e por quê:** para rodar localmente (e em container Docker), escolhemos **SQLite** ([db/schema.sql](db/schema.sql), arquivo `data/acolhe.db`) lido nativamente pelo módulo `node:sqlite` do Node.js 22 e pelo módulo `sqlite3` do Python 3, sem exigir instalação de servidor de banco externo. Para publicação em nuvem com disco efêmero (como Google Cloud Run), entregamos o esquema equivalente em **PostgreSQL** ([db/schema_postgres.sql](db/schema_postgres.sql), compatível com Cloud SQL, Supabase ou Neon), além de função Serverless para a Vercel ([api/[rota].js](api/%5Brota%5D.js)).
+- **Front-end modular sem dependências de build:** utilizamos JavaScript ES Modules nativo (`public/js/*.js`) + Leaflet para que o código possa ser inspecionado, testado e defendido linha por linha pela dupla sem etapas opacas de transpilação.
 
 O banco possui **7 tabelas** (6 relacionadas por chaves primárias e estrangeiras + 1 tabela de parâmetros), guardando **apenas dados públicos e agregados** e coluna booleana `is_teste` em todas as tabelas:
 
