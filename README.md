@@ -226,7 +226,7 @@ erDiagram
 - [public/js/app.js](public/js/app.js): Roteador SPA por hash (`#/`), gerencia os estados de carregando e erro, atualiza os avisos globais de modo offline ou dados de teste e move o foco de acessibilidade ao trocar de página.
 - [public/js/api.js](public/js/api.js): Cliente HTTP que busca os dados agregados do servidor uma única vez com timeout de 15 segundos (`AbortController`), mantendo tudo em memória sem usar cookies nem `localStorage`.
 - [public/js/paginas.js](public/js/paginas.js): Renderiza as 5 telas (*Início*, *Buscar serviço*, *O que é cada serviço*, *Cobertura* com gráfico SVG + tabela equivalente e *Sobre os dados*) e o bloco `"Fonte: ..., atualizado em ..."` em todas elas.
-- [public/js/mapa.js](public/js/mapa.js): Desenha o mapa interativo com Leaflet/OpenStreetMap quando há internet e alterna automaticamente para um mapa esquemático interativo e acessível por teclado em SVG quando offline.
+- [public/js/mapa.js](public/js/mapa.js): Desenha o mapa interativo com Leaflet/OpenStreetMap (com fallback automático para tiles CartoDB Voyager/OSM em `file://` ou erro `403`, e alternativa interativa acessível por teclado em SVG quando 100% offline).
 - [public/js/textos.js](public/js/textos.js): Reúne os textos acolhedores revisados com base na página oficial da RAPS/Ministério da Saúde, sem termos estigmatizantes e com linguagem simples.
 - [public/js/util.js](public/js/util.js): Funções puras de criação segura de elementos DOM (`textContent`, prevenindo XSS), formatação numérica/datas em `pt-BR`, distância de Haversine e componentes de carregando, vazio e erro.
 - [scripts/e2e_cdp.mjs](scripts/e2e_cdp.mjs): Teste automatizado de ponta a ponta via protocolo Chrome DevTools (CDP) que valida as 5 telas em `360 px`, visibilidade do CVV/SAMU, ausência de rolagem horizontal, mapas e zero vazamento de dados.
@@ -241,10 +241,10 @@ erDiagram
 
 ## 6. Limitações conhecidas
 
-1. **Atualização cadastral do CNES:** o CNES depende da atualização feita pelos gestores municipais e estaduais. Na amostra offline do CnesWeb, os estabelecimentos de Brasília (DF), Belo Horizonte (MG) e Porto Alegre (RS) possuem endereço completo e telefone cruzados com as cartas de serviços oficiais; nos demais municípios onde apenas a listagem resumida do CnesWeb foi coletada, endereço e telefone aparecem honestamente como `"não informado"` (nunca inventados).
+1. **Atualização cadastral do CNES:** o CNES depende da atualização feita pelos gestores municipais e estaduais. Na amostra offline do CnesWeb, os estabelecimentos do Rio de Janeiro (RJ), Niterói (RJ), Brasília (DF), Belo Horizonte (MG) e Porto Alegre (RS) possuem endereço completo e telefone cruzados com as cartas de serviços oficiais; nos demais municípios onde apenas a listagem resumida do CnesWeb foi coletada, endereço e telefone aparecem honestamente como `"não informado"` (nunca inventados).
 2. **Coordenadas e distâncias:** as distâncias entre municípios sem CAPS e os serviços mais próximos são calculadas em linha reta (fórmula de Haversine) a partir de coordenadas aproximadas.
 3. **Interpretação do indicador de cobertura:** municípios com menos de 15 mil habitantes costumam ser atendidos por consórcios ou pactuações regionais de saúde; por isso, cobertura municipal igual a zero em municípios pequenos deve ser analisada junto com a região de saúde.
-4. **Mapa online vs. offline:** quando há acesso à internet, o navegador carrega o Leaflet (`unpkg.com`) e os blocos de mapa do OpenStreetMap (que recebem o IP do navegador ao exibir o mapa). Em modo offline, o sistema usa o mapa esquemático interativo em SVG local, sem nenhuma requisição externa.
+4. **Mapa online vs. offline:** quando há acesso à internet, o navegador carrega o Leaflet (`unpkg.com`) e os blocos de mapa do OpenStreetMap (enviando apenas a origem raiz via `Referrer-Policy: strict-origin`, sem caminho nem escolhas do usuário). Em modo offline, o sistema usa o mapa esquemático interativo em SVG local, sem nenhuma requisição externa.
 
 ---
 
@@ -261,6 +261,7 @@ Ferramenta utilizada: **Google Antigravity**.
    - **Confirmação dos códigos CNES e da referência nacional:** confirmamos na Tabela de Tipos e Subtipos de Estabelecimento SCNES o Tipo `70` (`CENTRO DE ATENÇÃO PSICOSSOCIAL`) e os subtipos `70.01` a `70.07`, e no *Saúde Mental em Dados 12* / *Portaria de Consolidação GM/MS nº 3/2017* o parâmetro de `0,70 CAPS por 100 mil habitantes` e a fórmula ponderada do Ministério da Saúde.
    - **Bug de DOM no seletor de municípios (`replaceChildren`):** o teste E2E em Chrome headless detectou que `selMun.replaceChildren(opcaoPadrao, arrayDeOpcoes)` serializava o array como `[object HTMLOptionElement]`. Corrigimos usando spread (`...lista.map(...)`).
    - **Quebra de linha em telas de `360 px`:** o teste E2E em `360 px` detectou rolagem horizontal (`421 px`) na página `/sobre` causada por uma URL longa sem espaços. Corrigimos com `overflow-wrap: anywhere` no CSS.
+   - **Bloqueio `403 Access blocked` dos blocos de mapa do OpenStreetMap (`Referrer-Policy`):** inicialmente configuramos `Referrer-Policy: no-referrer`, o que fazia o servidor voluntário `tile.openstreetmap.org` recusar os tiles com erro `403` (pois a política de uso do OpenStreetMap proíbe requisições sem cabeçalho `Referer`). Corrigimos para `Referrer-Policy: strict-origin` (que envia apenas o domínio raiz, sem caminho nem parâmetros, preservando a privacidade) e adicionamos fallback automático para o servidor de tiles CartoDB Voyager (baseado no OpenStreetMap) e para o mapa vetorial em SVG offline.
    - **Alternativa de mapa offline em SVG:** como o CDN externo do Leaflet pode não carregar em redes restritas ou modo offline, implementamos em `public/js/mapa.js` um mapa esquemático interativo em SVG acessível por teclado que entra em ação automaticamente quando `window.L` não está disponível.
 
 Licença do código: MIT. Dados: públicos e abertos (CNES/DATASUS, Secretarias de Saúde e IBGE).

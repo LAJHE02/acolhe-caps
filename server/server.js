@@ -19,14 +19,15 @@ const MIME = {
   '.svg': 'image/svg+xml', '.ico': 'image/x-icon', '.txt': 'text/plain; charset=utf-8',
 };
 
-// CSP: só o próprio site, o Leaflet (unpkg) e as imagens do mapa (OpenStreetMap).
+// CSP: só o próprio site, o Leaflet (unpkg) e as imagens do mapa (OpenStreetMap e fallback Carto/OSM).
+// Referrer-Policy: 'strict-origin' envia apenas o domínio raiz (sem caminho/parâmetros), exigido pela política de uso de tiles do OpenStreetMap (evita erro 403 Access blocked).
 const CABECALHOS_SEGURANCA = {
   'Content-Security-Policy': [
     "default-src 'self'", "script-src 'self' https://unpkg.com", "style-src 'self' https://unpkg.com",
-    "img-src 'self' data: https://tile.openstreetmap.org", "connect-src 'self'",
+    "img-src 'self' data: https://tile.openstreetmap.org https://*.tile.openstreetmap.org https://*.basemaps.cartocdn.com", "connect-src 'self'",
     "base-uri 'none'", "form-action 'none'", "frame-ancestors 'none'",
   ].join('; '),
-  'Referrer-Policy': 'no-referrer',
+  'Referrer-Policy': 'strict-origin',
   'X-Content-Type-Options': 'nosniff',
   'Permissions-Policy': 'geolocation=(), camera=(), microphone=()',
 };

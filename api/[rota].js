@@ -221,7 +221,7 @@ async function consultarDados(rota) {
 
 module.exports = async (req, res) => {
   res.setHeader('Cache-Control', 'no-store');
-  res.setHeader('Referrer-Policy', 'no-referrer');
+  res.setHeader('Referrer-Policy', 'strict-origin');
   res.setHeader('X-Content-Type-Options', 'nosniff');
 
   if (req.method !== 'GET') {

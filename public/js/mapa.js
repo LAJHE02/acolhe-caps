@@ -136,9 +136,35 @@ export function desenharMapa(container, pontos, descricaoAcessivel) {
 
   const L = window.L;
   mapaAtual = L.map(container, { scrollWheelZoom: false }).setView([comCoord[0].lat, comCoord[0].lon], 12);
-  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 18, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+
+  // Em file:// (HTML aberto direto do computador sem servidor), o navegador não envia cabeçalho Referer HTTP,
+  // então o tile.openstreetmap.org bloqueia com 403. Nesse caso (ou se o OSM falhar), usamos o servidor CartoDB Voyager (baseado em dados OpenStreetMap).
+  const URL_OSM = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
+  const URL_CARTO_OSM = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png';
+  const ehArquivoLocal = typeof window !== 'undefined' && window.location && window.location.protocol === 'file:';
+
+  const camadaTiles = L.tileLayer(ehArquivoLocal ? URL_CARTO_OSM : URL_OSM, {
+    maxZoom: 18,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
   }).addTo(mapaAtual);
+
+  let trocouParaFallback = ehArquivoLocal;
+  let falhasConsecutivas = 0;
+  camadaTiles.on('tileerror', () => {
+    if (!trocouParaFallback) {
+      trocouParaFallback = true;
+      camadaTiles.setUrl(URL_CARTO_OSM);
+      return;
+    }
+    falhasConsecutivas += 1;
+    // Se ambos os servidores de mapa falharem (computador 100% sem internet), alterna para o mapa vetorial em SVG offline
+    if (falhasConsecutivas >= 4 && mapaAtual) {
+      mapaAtual.remove();
+      mapaAtual = null;
+      container.replaceChildren();
+      desenharMapaSvg(container, comCoord, descricaoAcessivel);
+    }
+  });
 
   for (const p of comCoord) {
     // O pino tem texto (número ou símbolo) e formato, não só cor.
