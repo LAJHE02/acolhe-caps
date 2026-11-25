@@ -23,9 +23,15 @@ const MIME = {
 // Referrer-Policy: 'strict-origin' envia apenas o domínio raiz (sem caminho/parâmetros), exigido pela política de uso de tiles do OpenStreetMap (evita erro 403 Access blocked).
 const CABECALHOS_SEGURANCA = {
   'Content-Security-Policy': [
-    "default-src 'self'", "script-src 'self' https://unpkg.com", "style-src 'self' https://unpkg.com",
-    "img-src 'self' data: https://tile.openstreetmap.org https://*.tile.openstreetmap.org https://*.basemaps.cartocdn.com", "connect-src 'self'",
-    "base-uri 'none'", "form-action 'none'", "frame-ancestors 'none'",
+    "default-src 'self'",
+    "script-src 'self' https://unpkg.com",
+    "style-src 'self' 'unsafe-inline' https://unpkg.com https://fonts.googleapis.com",
+    "font-src 'self' https://fonts.gstatic.com data:",
+    "img-src 'self' data: https://tile.openstreetmap.org https://*.tile.openstreetmap.org https://*.basemaps.cartocdn.com",
+    "connect-src 'self'",
+    "base-uri 'none'",
+    "form-action 'none'",
+    "frame-ancestors 'none'",
   ].join('; '),
   'Referrer-Policy': 'strict-origin',
   'X-Content-Type-Options': 'nosniff',
