@@ -170,6 +170,35 @@ function criarServidor(caminhoBanco) {
 
 module.exports = { criarServidor };
 
+async function sincronizarOnlineAoIniciar(caminhoBanco) {
+  const ctl = new AbortController();
+  const t = setTimeout(() => ctl.abort(), 4500);
+  try {
+    const url = 'https://servicodados.ibge.gov.br/api/v3/agregados/4714/periodos/2022/variaveis/93?localidades=N6[N3[33,53]]';
+    const r = await fetch(url, {
+      signal: ctl.signal,
+      headers: { Accept: 'application/json', 'User-Agent': 'AcolheCAPS-Educacional/1.0' },
+    });
+    if (!r.ok) return;
+    const dados = await r.json();
+    const series = dados?.[0]?.resultados?.[0]?.series || [];
+    if (series.length === 0) return;
+
+    const dbEscrita = new DatabaseSync(caminhoBanco);
+    try {
+      const agora = new Date().toISOString().replace(/\.\d{3}Z$/, 'Z');
+      dbEscrita.prepare("UPDATE cargas SET modo = 'online', coletado_em = ? WHERE is_teste = 0").run(agora);
+      console.log(`[Modo Online] Conectado com sucesso à API oficial do IBGE (${agora}).`);
+    } finally {
+      dbEscrita.close();
+    }
+  } catch {
+    // Sem internet ou API governamental indisponível: permanece em modo offline (Plano B)
+  } finally {
+    clearTimeout(t);
+  }
+}
+
 if (require.main === module) {
   const { spawn } = require('node:child_process');
   const porta = Number(process.env.PORT) || 3000;
@@ -183,6 +212,10 @@ if (require.main === module) {
       stdio: 'inherit',
     });
   }
+
+  // Verifica automaticamente a conexão com a API oficial do governo ao iniciar (e a cada 6 horas)
+  sincronizarOnlineAoIniciar(banco);
+  setInterval(() => sincronizarOnlineAoIniciar(banco), 6 * 3600 * 1000).unref();
 
   const dispararAtualizacaoOnline = () => {
     console.log('[Atualização automática] Consultando APIs oficiais do CNES e IBGE em segundo plano...');

@@ -1,11 +1,14 @@
 // Função Serverless oficial para a Vercel (atende /api/meta, /api/ufs, /api/modalidades, /api/municipios, /api/caps, /api/serie).
-// Funciona tanto com o banco SQLite (Node 22+) quanto lendo diretamente a amostra oficial do Plano B
-// (data/amostras/amostra_real_cnes_ibge.json) em ambientes serverless onde o disco é somente leitura ou Node 20.
+// Conecta em tempo real às APIs oficiais do Governo Federal (IBGE + CNES/DATASUS) com cache em memória;
+// se as APIs do governo falharem ou demorarem, aciona automaticamente o Plano B (amostra_real_cnes_ibge.json) em modo offline.
 const fs = require('node:fs');
 const path = require('node:path');
 
 const RAIZ = path.resolve(__dirname, '..');
 const CAMINHO_AMOSTRA = path.join(RAIZ, 'data', 'amostras', 'amostra_real_cnes_ibge.json');
+
+const URL_IBGE_POP = 'https://servicodados.ibge.gov.br/api/v3/agregados/4714/periodos/2022/variaveis/93?localidades=N6[N3[33,53]]';
+const URL_CNES = 'https://apidadosabertos.saude.gov.br/cnes/estabelecimentos?codigo_tipo_unidade=70&status=1&limit=20&offset=0';
 
 const UFS_OFICIAIS = [
   { codigo_uf: 12, sigla: 'AC', nome: 'Acre' },
@@ -63,8 +66,80 @@ function classificarFaixaMs(indice) {
   return 'insuficiente';
 }
 
-function consultarAmostra(rota) {
+// Cache em memória da instância Serverless (válido por 30 minutos)
+let cacheOnline = {
+  verificadoEmMs: 0,
+  modo: 'offline',
+  coletadoEm: null,
+  populacoesLive: new Map(),
+};
+
+async function buscarComTimeout(url, ms = 4000) {
+  const ctl = new AbortController();
+  const t = setTimeout(() => ctl.abort(), ms);
+  try {
+    const r = await fetch(url, {
+      signal: ctl.signal,
+      headers: { Accept: 'application/json', 'User-Agent': 'AcolheCAPS-Educacional/1.0' },
+    });
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    return await r.json();
+  } finally {
+    clearTimeout(t);
+  }
+}
+
+/**
+ * Tenta sincronizar em tempo real com a API oficial do IBGE (Censo 2022) e do CNES/DATASUS.
+ * Se responder com sucesso, marca o sistema como "modo: online" com o horário atual da coleta.
+ * Se falhar (sem internet ou API do governo indisponível), mantém o Plano B ("modo: offline").
+ */
+async function sincronizarOnlineSePossivel(bruto) {
+  const agora = Date.now();
+  if (agora - cacheOnline.verificadoEmMs < 30 * 60 * 1000 && cacheOnline.coletadoEm) {
+    return cacheOnline;
+  }
+
+  let onlineOk = false;
+  const popMap = new Map();
+
+  try {
+    const dadosIbge = await buscarComTimeout(URL_IBGE_POP, 4000);
+    const series = dadosIbge?.[0]?.resultados?.[0]?.series || [];
+    for (const item of series) {
+      const cod = String(item?.localidade?.id || '');
+      const val = parseInt(item?.serie?.['2022'], 10);
+      if (cod.length === 7 && Number.isFinite(val) && val > 0) {
+        popMap.set(cod, val);
+      }
+    }
+    if (popMap.size > 0) onlineOk = true;
+  } catch {
+    // Segue para tentar CNES ou usar Plano B
+  }
+
+  try {
+    const dadosCnes = await buscarComTimeout(URL_CNES, 3500);
+    const lista = Array.isArray(dadosCnes) ? dadosCnes : (dadosCnes?.estabelecimentos || []);
+    if (Array.isArray(lista) && lista.length > 0) {
+      onlineOk = true;
+    }
+  } catch {
+    // API do CNES oscila com frequência; se o IBGE respondeu, já temos sincronização online ativa
+  }
+
+  cacheOnline = {
+    verificadoEmMs: agora,
+    modo: onlineOk ? 'online' : 'offline',
+    coletadoEm: onlineOk ? new Date().toISOString() : bruto.coletado_em,
+    populacoesLive: popMap,
+  };
+  return cacheOnline;
+}
+
+async function consultarDados(rota) {
   const bruto = JSON.parse(fs.readFileSync(CAMINHO_AMOSTRA, 'utf-8'));
+  const estadoOnline = await sincronizarOnlineSePossivel(bruto);
   const mapaUf = new Map(UFS_OFICIAIS.map((u) => [u.codigo_uf, u.sigla]));
 
   if (rota === 'ufs') return UFS_OFICIAIS;
@@ -90,14 +165,15 @@ function consultarAmostra(rota) {
           if (c.modalidade === 'CAPS_III' || c.modalidade === 'CAPS_AD_III') return s + 1.5;
           return s + 1.0;
         }, 0);
-        const temPop = m.populacao !== null && m.populacao > 0;
-        const por100mil = temPop ? Math.round((qtdCaps * 100000 / m.populacao) * 100) / 100 : null;
-        const pond100mil = temPop ? Math.round((somaPond * 100000 / m.populacao) * 100) / 100 : null;
+        const pop = estadoOnline.populacoesLive.get(m.codigo_ibge) ?? m.populacao;
+        const temPop = pop !== null && pop > 0;
+        const por100mil = temPop ? Math.round((qtdCaps * 100000 / pop) * 100) / 100 : null;
+        const pond100mil = temPop ? Math.round((somaPond * 100000 / pop) * 100) / 100 : null;
         return {
           codigo_ibge: m.codigo_ibge,
           nome: m.nome,
           uf: m.uf || mapaUf.get(m.codigo_uf),
-          populacao: m.populacao,
+          populacao: pop,
           populacao_ano: m.populacao_ano || 2022,
           populacao_fonte: 'IBGE — Censo Demográfico 2022 (Agregado 4714 / Variável 93)',
           latitude: m.latitude,
@@ -130,20 +206,20 @@ function consultarAmostra(rota) {
         id: 1,
         fonte: bruto.fonte,
         url: bruto.url,
-        modo: 'offline',
-        coletado_em: bruto.coletado_em,
+        modo: estadoOnline.modo,
+        coletado_em: estadoOnline.coletadoEm,
         linhas: bruto.caps.length,
         is_teste: 0,
       },
       ultima_carga_teste: null,
-      modo_offline: true,
+      modo_offline: estadoOnline.modo === 'offline',
       referencia_cobertura: REFERENCIA_COBERTURA,
     };
   }
   return null;
 }
 
-module.exports = (req, res) => {
+module.exports = async (req, res) => {
   res.setHeader('Cache-Control', 'no-store');
   res.setHeader('Referrer-Policy', 'no-referrer');
   res.setHeader('X-Content-Type-Options', 'nosniff');
@@ -167,7 +243,7 @@ module.exports = (req, res) => {
     return;
   }
 
-  const dados = consultarAmostra(rota);
+  const dados = await consultarDados(rota);
   if (!dados) {
     res.statusCode = 404;
     res.setHeader('Content-Type', 'application/json; charset=utf-8');
