@@ -16,18 +16,55 @@ O **Acolhe CAPS**:
 
 ---
 
-## 2. Como rodar o projeto
+## 2. Como rodar o projeto (Docker, Node.js, Python, Vercel ou 2 cliques)
 
-Requisitos: **Node.js 22.5+** e **Python 3** (testado com Node 22.23 e Python 3.12). Não há pacotes externos para instalar (`npm install` / `pip install` não são necessários: o projeto usa apenas módulos nativos `node:http`, `node:sqlite` e `sqlite3`).
+### Opção A — Com Docker (sem precisar ter Node.js nem Python instalados)
 
-### Rodar com dados reais da amostra verificada (Plano B / modo offline — padrão)
+O container já empacota **Node.js 22**, **Python 3** e o banco **SQLite** pré-carregado com **302 CAPS reais** e **76 municípios** (incluindo os **116 CAPS do Rio de Janeiro**):
 
 ```bash
-python3 scripts/carga_real.py carregar-amostra   # cria data/acolhe.db com 186 CAPS reais e 53 municípios (Censo 2022) e gera data/caps.json
-node server/server.js                            # inicia o servidor em http://localhost:3000
+docker compose up --build
 ```
 
-*(Observação: se `data/acolhe.db` ainda não existir quando você rodar `node server/server.js`, o servidor carrega automaticamente a amostra real).*
+Depois abra `http://localhost:3000`.
+- **Modo Online automático:** ao iniciar com internet, o servidor sincroniza automaticamente com a API oficial do Governo Federal (IBGE / CNES) e entra em **`Modo: online`**.
+- **Modo Offline (Plano B) automático:** se estiver sem internet ou a API governamental cair, o container mantém o funcionamento usando a amostra real local ([data/amostras/amostra_real_cnes_ibge.json](data/amostras/amostra_real_cnes_ibge.json)) e exibe o aviso obrigatório `"Dados de <data> (modo offline)."`.
+
+#### Comandos rápidos no Docker para demonstrar os 3 modos na apresentação ao professor:
+
+```bash
+# 1. Demonstrar o Plano B (Modo Offline) com aviso "Dados de <data> (modo offline).":
+docker exec acolhe-caps python3 scripts/carga_real.py carregar-amostra
+
+# 2. Demonstrar os Dados de Teste (is_teste = 1) com aviso "Dados de teste, não são reais.":
+docker exec acolhe-caps python3 scripts/seed_teste.py
+
+# 3. Limpar os dados de teste e voltar para os Dados Reais em Modo Online:
+docker exec acolhe-caps python3 scripts/seed_teste.py --limpar
+docker restart acolhe-caps
+```
+
+### Opção B — Direto no navegador com 2 cliques (100% offline, sem instalar nada)
+
+Basta dar **2 cliques** no arquivo **[abrir_direto_no_navegador.html](abrir_direto_no_navegador.html)** na raiz do projeto (gerado por `python3 scripts/gerar_html_autonomo.py`). Ele traz o CSS, o JavaScript, o mapa vetorial em SVG e os 302 CAPS reais embutidos em um único arquivo `.html`.
+
+### Opção C — Com Node.js 22.5+ e Python 3 (ou somente Python 3)
+
+Não há pacotes externos para instalar (`npm install` / `pip install` não são necessários: o projeto usa apenas módulos nativos `node:http`, `node:sqlite` e `sqlite3`).
+
+```bash
+python3 scripts/carga_real.py carregar-amostra   # cria data/acolhe.db com 302 CAPS reais e 76 municípios (Censo 2022) e gera data/caps.json
+node server/server.js                            # inicia o servidor em http://localhost:3000 (ou: npm start)
+```
+
+- **Servidor com atualização online periódica (a cada 24h):** `npm run start:online` (ou `node server/server.js --atualizar-online`)
+- **Atualizar banco e HTML autônomo sob demanda via APIs do governo:** `npm run atualizar:online` (ou `python3 scripts/carga_real.py atualizar-auto`)
+- **Alternativa usando apenas Python (sem Node.js):** `python3 scripts/servidor.py`
+
+### Opção D — Publicação na Nuvem (Vercel, Google Cloud Run ou Render)
+
+- **Vercel:** o projeto inclui [vercel.json](vercel.json) e a Serverless Function [api/[rota].js](api/%5Brota%5D.js), que sincroniza em tempo real com a API oficial do IBGE/CNES (`Modo: online`) e aciona o Plano B automaticamente se a API governamental oscilar. Basta importar o repositório na Vercel e clicar em **Deploy**.
+- **Google Cloud Run / Render / Railway:** utilizam automaticamente o [Dockerfile](Dockerfile) na raiz do repositório.
 
 ### Rodar com dados de teste fictícios (desenvolvimento e casos de borda)
 
@@ -46,10 +83,10 @@ Volume gerado pelo seed de teste:
 ### Atualizar diretamente das APIs online (quando houver conexão com DEMAS e IBGE)
 
 ```bash
-python3 scripts/carga_real.py descobrir   # consulta as APIs reais, salva amostras em data/amostras/ e exibe status e campos
-# copie data/config_cnes.exemplo.json para data/config_cnes.json, confira os campos e marque "confirmado": true
-python3 scripts/carga_real.py carregar    # pagina a API (limit=20), grava no banco e em data/caps.json (usa Plano B se a API cair)
-python3 scripts/carga_real.py centroides  # opcional: atualiza o centro aproximado dos municípios via malhas do IBGE
+python3 scripts/carga_real.py atualizar-auto     # atualiza online usando data/config_cnes.json e aciona Plano B se a API cair
+python3 scripts/carga_real.py carregar --uf 33   # opcional: baixa online apenas uma UF específica (ex.: 33 = RJ, 53 = DF)
+python3 scripts/carga_real.py descobrir          # inspeciona endpoints brutos e salva amostras em data/amostras/
+python3 scripts/carga_real.py centroides         # opcional: atualiza o centro aproximado dos municípios via malhas do IBGE
 ```
 
 ### Rodar os testes automatizados
@@ -193,7 +230,12 @@ erDiagram
 - [public/js/textos.js](public/js/textos.js): Reúne os textos acolhedores revisados com base na página oficial da RAPS/Ministério da Saúde, sem termos estigmatizantes e com linguagem simples.
 - [public/js/util.js](public/js/util.js): Funções puras de criação segura de elementos DOM (`textContent`, prevenindo XSS), formatação numérica/datas em `pt-BR`, distância de Haversine e componentes de carregando, vazio e erro.
 - [scripts/e2e_cdp.mjs](scripts/e2e_cdp.mjs): Teste automatizado de ponta a ponta via protocolo Chrome DevTools (CDP) que valida as 5 telas em `360 px`, visibilidade do CVV/SAMU, ausência de rolagem horizontal, mapas e zero vazamento de dados.
-- [data/amostras/amostra_real_cnes_ibge.json](data/amostras/amostra_real_cnes_ibge.json): Amostra real verificada (Plano B) com 186 CAPS reais (Tipo 70 CNES + endereços/telefones das Secretarias de Saúde de DF, BH, POA e ES) e 53 municípios com população do Censo 2022 do IBGE.
+- [data/amostras/amostra_real_cnes_ibge.json](data/amostras/amostra_real_cnes_ibge.json): Amostra real verificada (Plano B) com **302 CAPS reais** (incluindo 116 do RJ, além de DF, MG, RS, ES, MS, MT, PI e PR) e **76 municípios** com população oficial do Censo 2022 do IBGE.
+- [data/config_cnes.json](data/config_cnes.json): Configuração confirmada dos códigos oficiais do SCNES (`codigo_tipo_unidade = 70` e subtipos `70.01` a `70.07`) para paginação automática da API DEMAS (`limit = 20`).
+- [scripts/servidor.py](scripts/servidor.py): Servidor HTTP alternativo escrito apenas com a biblioteca padrão do Python (`http.server` + `sqlite3`), permitindo rodar o sistema completo com banco de dados sem instalar o Node.js.
+- [scripts/gerar_html_autonomo.py](scripts/gerar_html_autonomo.py): Gera o arquivo autônomo [abrir_direto_no_navegador.html](abrir_direto_no_navegador.html) com CSS, JS e os 302 CAPS reais embutidos para abertura offline com 2 cliques.
+- [Dockerfile](Dockerfile) e [docker-compose.yml](docker-compose.yml): Empacotam Node.js 22, Python 3 e o banco SQLite em um container isolado com volume persistente em `./data`, pronto para rodar localmente ou no Google Cloud Run.
+- [api/[rota].js](api/%5Brota%5D.js) e [vercel.json](vercel.json): Serverless Function e configuração de rotas para publicação direta na Vercel com sincronização em tempo real com a API do IBGE/CNES e fallback automático para o Plano B.
 
 ---
 
